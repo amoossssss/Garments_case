@@ -31,7 +31,7 @@
       </el-col>
 
       <el-col :offset="1" :span="18">
-        <div class="content">
+        <div class="rightcontent">
          <router-view></router-view>
         </div>
       </el-col>
@@ -66,13 +66,14 @@
 
   .el-menu-vertical-demo {
     max-width: 150px;
-    margin: 0 auto;
+    margin: 20px auto;
+
   }
 
-  .content {
+  .rightcontent {
     background-color: #f2f2f2;
     height: 320px;
-    border-radius: 15px;
+    /*border-radius: 15px;*/
   }
 
   .item {
