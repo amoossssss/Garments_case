@@ -72,8 +72,12 @@
 
   .rightcontent {
     background-color: #f2f2f2;
-    height: 320px;
+    /*height: 320px;*/
     /*border-radius: 15px;*/
+  }
+
+  .sidemenu {
+    padding-top: 10px;
   }
 
   .item {

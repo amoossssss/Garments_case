@@ -14,6 +14,7 @@ import ConnectUs from '../views/ConnectUs.vue'
 
 Vue.use(Router)
 
+
 export default new Router({
   routes: [
     {path: '/', name: '', redirect: '/home'},
