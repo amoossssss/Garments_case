@@ -115,7 +115,7 @@
 
 
   .image {
-    width: 50%;
+    width: 100%;
     padding-bottom: 5px;
     padding-top: 5px;
   }
