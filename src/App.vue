@@ -49,7 +49,7 @@
         </div>
       </el-main>
 
-      <el-footer height="70px">
+      <el-footer height="110px">
         <h3>公司聯絡資訊</h3>
       </el-footer>
 
@@ -81,12 +81,13 @@
 
 <style>
 
-  body{margin: 0;}
+  body {
+    margin: 0;
+  }
 
   #app {
-    background-color:
-      #e6e6e6;
-    font-family: "Helvetica Neue","Hiragino Sans GB",Arial,sans-serif;
+    background-color: #e6e6e6;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
   }
 
   #container {
@@ -103,7 +104,7 @@
 
 
   /* 主内容區 */
-  main{    display: -webkit-box;  display: -ms-flexbox;  display: flex;  min-height: 900px;  border: solid 40px #d9d9d9; background-color: #d9d9d9;  }
+  main{    display: -webkit-box;  display: -ms-flexbox;  display: flex;  min-height: 950px;  border: solid 40px #d9d9d9; background-color: #d9d9d9;  }
   main .main-right{-webkit-box-flex: 1;  -ms-flex: 1;  flex: 1;  background-color: #fff; padding: 50px 70px; border-radius: 12px}
 
   .el-footer{

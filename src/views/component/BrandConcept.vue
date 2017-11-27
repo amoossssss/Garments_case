@@ -26,26 +26,27 @@
 </template>
 
 <style>
-  .title{
+  .title {
     padding-top: 20px;
     padding-left: 20px;
   }
 
-  .line{
+  .line {
     margin-left: 20px;
     margin-right: 20px;
     border-color: #5d5d5d;
     background-color: #5d5d5d;
   }
 
-  .content{
+  .content {
     font-size: 16px;
     padding-left: 25px;
     padding-bottom: 5px;
     color: #5d5d5d;
   }
 
-  .one{
+  .one {
     padding-top: 20px;
   }
+
 </style>
