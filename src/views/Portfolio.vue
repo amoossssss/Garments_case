@@ -2,40 +2,68 @@
   <div>
 
     <!--作品區-->
-    <el-row :span="24" class="portfolio">
+    <el-row :span="24" class="portfolio" justify="space-around" type="flex">
 
-      <el-col :span="6" >
+      <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/clothes.jpg" class="image">
+          <img src="../assets/Portfolio/cloth1.png" class="image">
           <div style="padding: 14px;" class="work">
-            <span>作品名稱1</span>
-            <div class="bottom clearfix">
-              <el-button type="text" @click="dialogVisible = true">查看大圖</el-button>
-            </div>
+            <span>百樂</span>
+            <span class="year">2017</span>
           </div>
         </el-card>
       </el-col>
 
-      <el-col :offset="3" :span="6" >
+      <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/clothes.jpg" class="image">
+          <img src="../assets/Portfolio/cloth2.png" class="image">
           <div style="padding: 14px;" class="work">
-            <span>作品名稱2</span>
-            <div class="bottom clearfix">
-              <el-button type="text" @click="dialogVisible = true">查看大圖</el-button>
-            </div>
+            <span>政大財經</span>
+            <span class="year">2017</span>
           </div>
         </el-card>
       </el-col>
 
-      <el-col :offset="3" :span="6" >
+      <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/clothes.jpg" class="image">
+          <img src="../assets/Portfolio/cloth3.png" class="image">
           <div style="padding: 14px;" class="work">
-            <span>作品名稱3</span>
-            <div class="bottom clearfix">
-              <el-button type="text" @click="dialogVisible = true">查看大圖</el-button>
-            </div>
+            <span>Juniper</span>
+            <span class="year">2017</span>
+          </div>
+        </el-card>
+      </el-col>
+
+    </el-row>
+
+    <el-row :span="24" class="portfolio"  justify="space-around" type="flex">
+
+      <el-col :span="7" >
+        <el-card :body-style="{ padding: '0px' }">
+          <img src="../assets/Portfolio/cloth4.png" class="image">
+          <div style="padding: 14px;" class="work">
+            <span>光紅建聖</span>
+            <span class="year">2016</span>
+          </div>
+        </el-card>
+      </el-col>
+
+      <el-col :span="7" >
+        <el-card :body-style="{ padding: '0px' }">
+          <img src="../assets/Portfolio/cloth5.png" class="image">
+          <div style="padding: 14px; " class="work">
+            <span>國光劇團</span>
+            <span class="year">2016</span>
+          </div>
+        </el-card>
+      </el-col>
+
+      <el-col :span="7" >
+        <el-card :body-style="{ padding: '0px' }">
+          <img src="../assets/Portfolio/cloth6.png" class="image">
+          <div style="padding: 14px;" class="work">
+            <span>妮樂佛創意有限公司</span>
+            <span class="year">2016</span>
           </div>
         </el-card>
       </el-col>
@@ -53,15 +81,6 @@
       </el-col>
     </el-row>
 
-    <!--顯示大圖-->
-    <el-dialog
-      title="作品名稱"
-      :visible.sync="dialogVisible"
-      width="75%"
-      center>
-      <img src="../assets/clothes.jpg" class="image">
-    </el-dialog>
-
   </div>
 </template>
 
@@ -73,7 +92,8 @@
     data() {
       return {
         dialogVisible: false,
-        totalWork: 45
+        totalWork: 9
+        // TODO 換頁
       };
     },
   };
@@ -84,8 +104,8 @@
 
   .portfolio {
     width: 100%;
+    padding-bottom: 25px;
   }
-
 
   .pages {
     /*position: static;*/
@@ -95,14 +115,21 @@
 
 
   .image {
-    width: 100%;
+    width: 50%;
+    padding-bottom: 5px;
+    padding-top: 5px;
   }
-
 
   .work {
     text-align: center;
+    background-color: darkgrey;
+    font-size: small;
   }
 
-
+  .year {
+    padding-top: 4px;
+    float: right;
+    font-size: xx-small;
+  }
 
 </style>
