@@ -10,14 +10,14 @@
           :router="true"
           backgroundColor="#f2f2f2"
           text-color="#191919"
-          active-text-color="#f2a718">
+          active-text-color="#f26531">
           <el-menu-item index="/brandconcept" class="item">
             <i class="el-icon-menu"></i>
             <span slot="title">品牌理念</span>
           </el-menu-item>
           <el-menu-item index="/materials" class="item">
             <i class="el-icon-star-on"></i>
-            <span slot="title">衣服布料</span>
+            <span slot="title">布料材質</span>
           </el-menu-item>
           <el-menu-item index="/techniques" class="item">
             <i class="el-icon-printer"></i>

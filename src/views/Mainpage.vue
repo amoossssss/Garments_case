@@ -1,17 +1,20 @@
-<template>
+<template class="main">
   <div>
     <el-row>
       <el-col :span="24" >
-        <el-carousel indicator-position="outside" height="400px">
+        <div class="block">
+        <el-carousel indicator-position="outside" height="600px">
           <el-carousel-item  :key="1">
-           <!--<img src="../assets/clothes.jpg">-->
-            <h1>Image1</h1>
+           <img src="../assets/MainPage/banner1.jpg" class="carousel-img">
           </el-carousel-item>
           <el-carousel-item  :key="2">
-            <!--<img src="../assets/clothes2.jpg">-->
-            <h1>Image2</h1>
+            <img src="../assets/MainPage/banner2.jpg" class="carousel-img">
+          </el-carousel-item>
+          <el-carousel-item  :key="3">
+            <img src="../assets/MainPage/banner3.jpg" class="carousel-img">
           </el-carousel-item>
         </el-carousel>
+        </div>
       </el-col>
     </el-row>
 
@@ -33,14 +36,7 @@
     </el-row>
 
     <el-row type="flex" justify="center">
-      <el-col :span="23">
-        <el-card class="box-card">
-          <h3>衣服材質圖例說明</h3>
-          <p>xxxxxxxxxxxxxxxx</p>
-          <p>xxxxxxxxxxxxxxxx</p>
-          <p>xxxxxxxxxxxxxxxx</p>
-        </el-card>
-      </el-col>
+
     </el-row>
 
   </div>
@@ -62,23 +58,6 @@
 
   .el-carousel {
     margin-bottom: 20px;
-  }
-
-  .el-carousel__item h1 {
-    color: #475669;
-    font-size: 48px;
-    opacity: 0.75;
-    line-height: 300px;
-    margin: 0;
-    text-align: center;
-  }
-
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
   }
 
   .time {
@@ -121,11 +100,15 @@
     text-align: center;
   }
 
-  .recommend{
+  .recommend {
     -webkit-writing-mode: vertical-lr;
     writing-mode: vertical-lr;
     text-align: center;
     color: crimson;
     font-size: larger;
+  }
+
+  .carousel-img {
+    width: 100%;
   }
 </style>

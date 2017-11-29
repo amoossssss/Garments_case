@@ -5,18 +5,16 @@
       <el-header class="header" >
         <el-row>
           <el-col :span="24">
-            <!--<el-col :span="5">-->
-              <!--<img src="./assets/google.svg" class="logo">-->
-            <!--</el-col>-->
+            <img src="./assets/MainPage/logo.png" class="logo">
             <el-menu
               :default-active="$route.path"
               class="el-menu-demo"
               mode="horizontal"
               @select="handleSelect"
               :router="true"
-              background-color="#545c64"
+              background-color="#676F77"
               text-color="#fff"
-              active-text-color="#ffd04b">
+              active-text-color="#f26531">
               <el-col :span="3" :offset="3">
                 <el-menu-item index="/home">首頁</el-menu-item>
               </el-col>
@@ -24,7 +22,7 @@
                 <el-submenu index="/about">
                   <template slot="title">關於我們</template>
                   <el-menu-item index="/brandconcept">品牌概念</el-menu-item>
-                  <el-menu-item index="/materials">衣服布料</el-menu-item>
+                  <el-menu-item index="/materials">布料材質</el-menu-item>
                   <el-menu-item index="/techniques">印刷技術</el-menu-item>
                   <el-menu-item index="/howtomaintain">保養方式</el-menu-item>
                 </el-submenu>
@@ -93,14 +91,14 @@
   #container {
     margin: 0 auto;
     max-width: 1600px;
-    min-width: 900px;
+    min-width: 1200px;
   }
 
   /* 導覽目錄 */
-  header{z-index: 1000;min-width: 900px; transition: all 0.5s ease;  background-color: #545c64;  }
+  header{z-index: 1000;min-width: 900px; transition: all 0.5s ease;  background-color: #676F77;  }
   /*header.header-fixed{position: fixed;top: 0;left: 0;right: 0;}*/
   /*Menu pushed right 90px*/
-  header .el-menu-demo{padding-left: 180px!important;}
+  header .el-menu-demo{padding-left: 280px!important;}
 
 
   /* 主内容區 */
@@ -114,9 +112,12 @@
   }
 
   .logo {
-    height: 60px ;
+    height: 55px;
+    margin-left: 60px;
+    margin-top: 2px;
     display: block;
-    background-color: azure;
+    position: absolute;
+    z-index: 1;
   }
 
 </style>

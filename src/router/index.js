@@ -22,7 +22,7 @@ export default new Router({
     {path: '/about', name:'關於', component: Aboutpage, redirect:'/concept',
       children:[
         {path:'/brandconcept', name:'品牌理念', component: BrandConcept},
-        {path:'/materials', name:'衣服布料', component: Materails},
+        {path:'/materials', name:'布料材質', component: Materails},
         {path:'/techniques', name:'印刷技術', component: PrintTechnique},
         {path:'/howtomaintain', name:'保養方式', component: WaysToMaintain}
       ]},
