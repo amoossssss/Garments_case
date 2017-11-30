@@ -247,7 +247,7 @@
   .sentence {
     text-align: center;
     color: #191919;
-    font-size: x-small;
+    font-size: small;
     padding-left: 5px;
     padding-right: 5px;
   }
@@ -261,7 +261,7 @@
   }
 
   .flow_desc {
-    font-size: x-small;
+    font-size: small;
   }
 
 </style>

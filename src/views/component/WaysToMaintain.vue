@@ -49,11 +49,11 @@
     background-color: darkgrey;
     text-align: center;
     color: white;
-    font-size: small;
+    font-size: medium;
   }
 
   .text {
-    font-size: x-small;
+    font-size: small;
     margin-left: 55px;
     padding-bottom: 25px;
     margin-right: 25px;

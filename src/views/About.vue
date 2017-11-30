@@ -77,10 +77,11 @@
   }
 
   .sidemenu {
-    padding-top: 10px;
+    /*padding-top: 10px;*/
   }
 
   .item {
     text-align: center;
+    font-size: medium;
   }
 </style>

@@ -59,7 +59,7 @@
   }
 
   .descP {
-    font-size: x-small;
+    font-size: small;
   }
 
   .boxP {
