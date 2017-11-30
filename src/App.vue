@@ -5,7 +5,7 @@
       <el-header class="header" >
         <el-row>
           <el-col :span="24">
-            <img src="./assets/MainPage/logo.png" class="logo">
+            <a href="/home"><img src="./assets/MainPage/logo.png" class="logo"></a>
             <el-menu
               :default-active="$route.path"
               class="el-menu-demo"
@@ -98,7 +98,7 @@
   header{z-index: 1000;min-width: 900px; transition: all 0.5s ease;  background-color: #676F77;  }
   /*header.header-fixed{position: fixed;top: 0;left: 0;right: 0;}*/
   /*Menu pushed right 90px*/
-  header .el-menu-demo{padding-left: 280px!important;}
+  header .el-menu-demo{padding-left: 220px!important;}
 
 
   /* 主内容區 */

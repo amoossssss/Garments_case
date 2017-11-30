@@ -66,7 +66,7 @@
 
   .el-menu-vertical-demo {
     max-width: 150px;
-    margin: 20px auto;
+    /*margin: 20px auto;*/
 
   }
 
@@ -77,7 +77,7 @@
   }
 
   .sidemenu {
-    /*padding-top: 10px;*/
+    padding-top: 20px;
   }
 
   .item {
