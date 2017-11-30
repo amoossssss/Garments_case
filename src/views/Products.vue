@@ -65,7 +65,7 @@
     data() {
       return {
         dialogVisible: false,
-        totalWork: 45
+        totalWork: 9
       };
     },
     methods: {

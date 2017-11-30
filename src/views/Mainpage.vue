@@ -19,24 +19,43 @@
     </el-row>
 
     <el-row type="flex" justify="center">
-      <el-col :span="5" v-for="(o, index) in 4" :key="o" :offset="index > 0 ? 1 : 0">
-        <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/clothes.jpg" class="image">
-          <div style="padding: 14px;" class="center">
-            <span>推薦衣服{{index+1}}</span>
-            <div class="bottom clearfix">
-              <el-button type="text" class="button">查看詳情</el-button>
+      <el-col>
+        <el-row>
+          <el-col :span="3">
+            <div class="decoration">
+              <h3 class="features-title">客製產品</h3>
             </div>
-          </div>
-        </el-card>
-      </el-col>
-      <el-col :span="1" :offset="1" class="recommend">
-        推薦商品
+          </el-col>
+        </el-row>
+        <el-row class="items" justify="space-between" type="flex">
+          <!--TODO connect with product page-->
+          <el-col :span="5">
+            <a><img src="../../src/assets/MainPage/小圖1.jpg" class="features-img"></a>
+          </el-col>
+          <el-col :span="5">
+            <a><img src="../../src/assets/MainPage/小圖2.jpg" class="features-img"></a>
+          </el-col>
+          <el-col :span="5">
+            <a><img src="../../src/assets/MainPage/小圖4.jpg" class="features-img"></a>
+          </el-col>
+          <el-col :span="5">
+            <a><img src="../../src/assets/MainPage/小圖5.jpg" class="features-img"></a>
+          </el-col>
+        </el-row>
       </el-col>
     </el-row>
 
     <el-row type="flex" justify="center">
-
+      <el-col>
+        <el-row>
+          <el-col :span="3">
+            <div class="decoration">
+              <h3 class="features-title">產品特色</h3>
+            </div>
+          </el-col>
+        </el-row>
+        <img src="../../src/assets/MainPage/banner5.jpg" class="features-img">
+      </el-col>
     </el-row>
 
   </div>
@@ -44,8 +63,11 @@
 
 <script>
   import ElRow from "element-ui/packages/row/src/row";
+  import ElCol from "element-ui/packages/col/src/col";
   export default {
-    components: {ElRow},
+    components: {
+      ElCol,
+      ElRow},
     data() {
       return {
         currentDate: new Date()
@@ -55,60 +77,27 @@
 </script>
 
 <style>
-
-  .el-carousel {
-    margin-bottom: 20px;
-  }
-
-  .time {
-    font-size: 13px;
-    color: #999;
-  }
-
-  .bottom {
-    margin-top: 13px;
-    line-height: 12px;
-  }
-
-  .button {
-    padding: 0;
-    float: right;
-  }
-
-  .image {
-    width: 100%;
-    display: block;
-  }
-
-  .clearfix:before,
-  .clearfix:after {
-    display: table;
-    content: "";
-  }
-
-  .clearfix:after {
-    clear: both
-  }
-
-  .box-card {
-    margin-top: 30px;
-    text-align: center;
-    height: 200px;
-  }
-
-  .center {
-    text-align: center;
-  }
-
-  .recommend {
-    -webkit-writing-mode: vertical-lr;
-    writing-mode: vertical-lr;
-    text-align: center;
-    color: crimson;
-    font-size: larger;
-  }
-
   .carousel-img {
     width: 100%;
+  }
+
+  .features-img {
+    width: 100%;
+  }
+
+  .decoration {
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+  }
+
+  .features-title {
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+  .items {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 </style>
