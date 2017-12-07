@@ -105,6 +105,7 @@
     margin: 0 auto;
     max-width: 1600px;
     min-width: 1200px;
+    background-color: rgba(149,149,149,0.86);;
   }
 
   /* 導覽目錄 */
