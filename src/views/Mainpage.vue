@@ -1,7 +1,7 @@
 <template class="main">
   <div>
     <el-row>
-      <el-col :span="24" >
+      <el-col>
         <div class="block">
         <el-carousel indicator-position="outside" height="600px">
           <el-carousel-item  :key="1">
@@ -94,6 +94,7 @@
     text-align: center;
     margin-bottom: 5px;
     margin-top: 5px;
+    color: grey;
   }
 
   .items {

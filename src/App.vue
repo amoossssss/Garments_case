@@ -47,8 +47,21 @@
         </div>
       </el-main>
 
-      <el-footer height="110px">
-        <h3>公司聯絡資訊</h3>
+      <el-footer height="">
+        <el-row>
+          <el-col :span="10">
+            <h2>SERVICE</h2>
+            <div class="contact">
+              <h3>電子信箱 echoplus2016@gmail.com</h3>
+              <h3>聯絡電話 02-8692-356</h3>
+            </div>
+            <h6>©echoplus. All Rights reserved</h6>
+          </el-col>
+          <el-col :span="3" :offset="9">
+            <!--TODO add FB href-->
+            <a href=""><img src="./assets/MainPage/FB.jpg" class="FB"></a>
+          </el-col>
+        </el-row>
       </el-footer>
 
     </el-container>
@@ -106,9 +119,10 @@
   main .main-right{-webkit-box-flex: 1;  -ms-flex: 1;  flex: 1;  background-color: #fff; padding: 50px 70px; border-radius: 12px}
 
   .el-footer{
-    background-color: #545c64;
+    background-color: rgba(145,145,145,0.76);
+    /*#545c64*/
     color: #fff;
-    text-align: center;
+    padding-left: 80px;
   }
 
   .logo {
@@ -118,6 +132,18 @@
     display: block;
     position: absolute;
     z-index: 1;
+  }
+
+  .contact {
+    margin-top: 20px ;
+    font-size: small;
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+
+  .FB {
+    width: 100%;
+    margin-top: 45%;
   }
 
 </style>
