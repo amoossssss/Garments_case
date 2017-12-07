@@ -4,7 +4,9 @@
       <el-header class="header" >
         <el-row>
           <el-col :span="24">
-            <a href="/home"><img src="./assets/MainPage/logo.png" class="logo"></a>
+            <div @click="goHome()">
+              <img src="./assets/MainPage/logo.png" class="logo">
+            </div>
             <el-menu
               :default-active="$route.path"
               class="el-menu-demo"
@@ -84,6 +86,9 @@
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
+      },
+      goHome() {
+          this.$router.push({name:'主頁'}) ;
       }
     }
   }
