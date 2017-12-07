@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <el-container id="container">
-      <!-- TODO Logo空間 -->
       <el-header class="header" >
         <el-row>
           <el-col :span="24">
@@ -58,8 +57,9 @@
             <h6>©echoplus. All Rights reserved</h6>
           </el-col>
           <el-col :span="3" :offset="9">
-            <!--TODO add FB href-->
-            <a href=""><img src="./assets/MainPage/FB.jpg" class="FB"></a>
+            <a target="_blank" href="https://facebook.com/echoplus2016/">
+              <img src="./assets/MainPage/FB.jpg" class="FB">
+            </a>
           </el-col>
         </el-row>
       </el-footer>
@@ -112,7 +112,6 @@
   /*header.header-fixed{position: fixed;top: 0;left: 0;right: 0;}*/
   /*Menu pushed right 90px*/
   header .el-menu-demo{padding-left: 220px!important;}
-
 
   /* 主内容區 */
   main{    display: -webkit-box;  display: -ms-flexbox;  display: flex;  min-height: 950px;  border: solid 40px #d9d9d9; background-color: #d9d9d9;  }
