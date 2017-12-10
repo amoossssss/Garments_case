@@ -1,12 +1,13 @@
 <template>
   <div>
-
+    <h1 class="center">歷年作品</h1>
+    <hr class="line">
     <!--作品區-->
     <el-row :span="24" class="portfolio" justify="space-around" type="flex">
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth1.png" class="image">
+          <img src="../assets/Portfolio/cloth1.jpg" class="image">
           <div style="padding: 14px;" class="work">
             <span>百樂</span>
             <span class="year">2017</span>
@@ -16,7 +17,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth2.png" class="image">
+          <img src="../assets/Portfolio/cloth2.jpg" class="image">
           <div style="padding: 14px;" class="work">
             <span>政大財經</span>
             <span class="year">2017</span>
@@ -26,7 +27,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth3.png" class="image">
+          <img src="../assets/Portfolio/cloth3.jpg" class="image">
           <div style="padding: 14px;" class="work">
             <span>Juniper</span>
             <span class="year">2017</span>
@@ -40,7 +41,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth4.png" class="image">
+          <img src="../assets/Portfolio/cloth4.jpg" class="image">
           <div style="padding: 14px;" class="work">
             <span>光紅建聖</span>
             <span class="year">2016</span>
@@ -50,7 +51,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth5.png" class="image">
+          <img src="../assets/Portfolio/cloth5.jpg" class="image">
           <div style="padding: 14px; " class="work">
             <span>國光劇團</span>
             <span class="year">2016</span>
@@ -60,7 +61,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth6.png" class="image">
+          <img src="../assets/Portfolio/cloth6.jpg" class="image">
           <div style="padding: 14px;" class="work">
             <span>妮樂佛創意有限公司</span>
             <span class="year">2016</span>
@@ -123,13 +124,26 @@
   .work {
     text-align: center;
     background-color: darkgrey;
-    font-size: small;
+    font-size: medium;
   }
 
   .year {
     padding-top: 4px;
     float: right;
-    font-size: xx-small;
+    font-size: small;
   }
 
+  .center {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 0px;
+  }
+
+  .line {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid grey;
+  }
 </style>

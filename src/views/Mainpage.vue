@@ -27,25 +27,37 @@
             </div>
           </el-col>
         </el-row>
-        <el-row class="items" justify="space-between" type="flex">
-          <el-col :span="5" >
-            <div @click="product('Tshirt')">
-              <img src="../../src/assets/MainPage/小圖1.jpg" class="features-img">
+        <el-row class="items" justify="space-between" type="flex" :gutter="20">
+          <el-col :span="6" >
+            <div @click="product('Tshirt')" class="item">
+              <img src="../../src/assets/MainPage/小圖1_test.jpg" class="features-img">
+              <div class="middle">
+                <div class="text">前往商品頁面</div>
+              </div>
             </div>
           </el-col>
-          <el-col :span="5">
-            <div @click="product('Hoodie')">
-              <img src="../../src/assets/MainPage/小圖2.jpg" class="features-img">
+          <el-col :span="6">
+            <div @click="product('Hoodie')" class="item">
+              <img src="../../src/assets/MainPage/小圖2_test.jpg" class="features-img">
+              <div class="middle">
+                <div class="text">前往商品頁面</div>
+              </div>
             </div>
           </el-col>
-          <el-col :span="5">
-            <div @click="product('Polo')">
-              <img src="../../src/assets/MainPage/小圖4.jpg" class="features-img">
+          <el-col :span="6">
+            <div @click="product('Polo')" class="item">
+              <img src="../../src/assets/MainPage/小圖4_test.jpg" class="features-img">
+              <div class="middle">
+                <div class="text">前往商品頁面</div>
+              </div>
             </div>
           </el-col>
-          <el-col :span="5">
-            <div @click="product('Bag')">
-              <img src="../../src/assets/MainPage/小圖5.jpg" class="features-img">
+          <el-col :span="6">
+            <div @click="product('Bag')" class="item">
+              <img src="../../src/assets/MainPage/小圖5_test.jpg" class="features-img">
+              <div class="middle">
+                <div class="text">前往商品頁面</div>
+              </div>
             </div>
           </el-col>
         </el-row>
@@ -104,7 +116,12 @@
   }
 
   .features-img {
+    opacity: 1;
+    display: block;
     width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
   }
 
   .decoration {
@@ -124,4 +141,37 @@
     margin-bottom: 70px;
   }
 
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
+  .item {
+    position: relative;
+  }
+
+  .item:hover .middle {
+    opacity: 1;
+  }
+
+  .item:hover .features-img {
+    opacity: 0.25;
+  }
+
+  .text {
+    /*background-color: gainsboro;*/
+    color: black;
+    font-size: 24px;
+    font-weight: bolder;
+    width: 100%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    letter-spacing: 3px;
+  }
 </style>

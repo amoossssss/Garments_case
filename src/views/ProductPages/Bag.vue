@@ -12,6 +12,7 @@
         <div class="desc">
           <p class="desc_message">商品資訊：</p>
           <p>Made In Taiwan</p>
+          <p>100%棉帆布或其他材質均可</p>
         </div>
       </el-col>
     </el-row>

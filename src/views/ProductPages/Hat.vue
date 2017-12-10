@@ -2,7 +2,7 @@
   <div>
    <el-row :span="24" justify="center" type="flex" class="product">
      <el-col :span="6">
-      <img src="../../assets/Product/帽小圖.jpg" class="item_image">
+      <img src="../../assets/Product/帽小.jpg" class="item_image">
      </el-col>
      <el-col :offset="2" :span="10">
        <p class="item_title">帽子</p>
@@ -12,6 +12,7 @@
        <div class="desc">
          <p class="desc_message">商品資訊：</p>
          <p>Made In Taiwan</p>
+         <p>材質可分100%棉斜紋或其他混紡材質均可</p>
        </div>
      </el-col>
    </el-row>

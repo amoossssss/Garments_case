@@ -12,7 +12,7 @@
         <div class="desc">
           <p class="desc_message">商品資訊：</p>
           <p>Made In Taiwan</p>
-          <p>35%純棉 65%聚酯纖維</p>
+          <p>65%純棉 35%聚酯纖維</p>
         </div>
       </el-col>
     </el-row>

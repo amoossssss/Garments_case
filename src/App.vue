@@ -1,45 +1,43 @@
 <template>
   <div id="app">
     <el-container id="container">
-      <el-header class="header" >
-        <el-row>
-          <el-col :span="24">
-            <div @click="goHome()">
-              <img src="./assets/MainPage/logo.png" class="logo">
-            </div>
-            <el-menu
-              :default-active="$route.path"
-              class="el-menu-demo"
-              mode="horizontal"
-              @select="handleSelect"
-              :router="true"
-              background-color="#676F77"
-              text-color="#fff"
-              active-text-color="#f26531">
-              <el-col :span="3" :offset="3">
-                <el-menu-item index="/home">首頁</el-menu-item>
-              </el-col>
-              <el-col :span="3">
-                <el-submenu index="/about">
-                  <template slot="title">關於我們</template>
-                  <el-menu-item index="/brandconcept">品牌概念</el-menu-item>
-                  <el-menu-item index="/materials">布料材質</el-menu-item>
-                  <el-menu-item index="/techniques">印刷技術</el-menu-item>
-                  <el-menu-item index="/howtomaintain">保養方式</el-menu-item>
-                </el-submenu>
-              </el-col>
-              <el-col :span="3">
-                <el-menu-item index="/products">商品清單</el-menu-item>
-              </el-col>
-              <el-col :span="3">
-                <el-menu-item index="/portfolio">歷年作品</el-menu-item>
-              </el-col>
-              <el-col :span="3">
-                <el-menu-item index="/connectus">聯絡我們</el-menu-item>
-              </el-col>
-            </el-menu>
-          </el-col>
-        </el-row>
+      <el-header class="header">
+        <div @click="goHome()">
+          <img src="./assets/MainPage/logo.png" class="logo">
+        </div>
+        <div>
+          <el-menu
+            :default-active="$route.path"
+            class="el-menu-demo"
+            mode="horizontal"
+            @select="handleSelect"
+            :router="true"
+            background-color="#676F77"
+            text-color="#fff"
+            active-text-color="#f26531">
+            <!--<el-col :span="3">-->
+              <el-menu-item index="/home" class="menu">首頁</el-menu-item>
+            <!--</el-col>-->
+            <!--<el-col :span="3">-->
+              <el-submenu index="/about">
+                <template slot="title">關於我們</template>
+                <el-menu-item index="/brandconcept">品牌概念</el-menu-item>
+                <el-menu-item index="/materials">布料材質</el-menu-item>
+                <el-menu-item index="/techniques">印刷技術</el-menu-item>
+                <el-menu-item index="/howtomaintain">保養方式</el-menu-item>
+              </el-submenu>
+            <!--</el-col>-->
+            <!--<el-col :span="3">-->
+              <el-menu-item index="/products">商品清單</el-menu-item>
+            <!--</el-col>-->
+            <!--<el-col :span="3">-->
+              <el-menu-item index="/portfolio">歷年作品</el-menu-item>
+            <!--</el-col>-->
+            <!--<el-col :span="3">-->
+              <el-menu-item index="/connectus">聯絡我們</el-menu-item>
+            <!--</el-col>-->
+          </el-menu>
+        </div>
       </el-header>
 
       <el-main>
@@ -114,10 +112,9 @@
   }
 
   /* 導覽目錄 */
-  header{z-index: 1000;min-width: 900px; transition: all 0.5s ease;  background-color: #676F77;  }
+  header{z-index: 1000; transition: all 0.5s ease;  background-color: #676F77;}
   /*header.header-fixed{position: fixed;top: 0;left: 0;right: 0;}*/
-  /*Menu pushed right 90px*/
-  header .el-menu-demo{padding-left: 220px!important;}
+  header .el-menu-demo{padding-left: 220px!important; float: right; margin-right: 42px}
 
   /* 主内容區 */
   main{    display: -webkit-box;  display: -ms-flexbox;  display: flex;  min-height: 950px;  border: solid 40px #d9d9d9; background-color: #d9d9d9;  }
@@ -150,5 +147,6 @@
     width: 100%;
     margin-top: 45%;
   }
+
 
 </style>

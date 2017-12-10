@@ -1,6 +1,7 @@
 <template>
   <div>
-
+    <h1 class="center">產品清單</h1>
+    <hr class="line">
     <!--商品區-->
     <el-row :span="24" class="products" justify="space-around" type="flex">
 
@@ -58,7 +59,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Product/帽小圖.jpg" class="image">
+          <img src="../assets/Product/帽小.jpg" class="image">
           <div style="padding: 14px;" class="work">
             <span class="item_name">帽子</span>
             <div class="bottom clearfix">
@@ -69,7 +70,12 @@
       </el-col>
 
       <!--排版需求-->
-      <el-col :span="7">
+      <el-col :span="7" >
+        <el-card :body-style="{ padding: '0px' }">
+          <div @click="goOther()">
+            <img src="../../src/assets/Product/其他商品.jpg" class="image" id="other">
+          </div>
+        </el-card>
       </el-col>
 
 
@@ -121,6 +127,9 @@
         if(names=='hat'){
           this.$router.push({name:'帽子'}) ;
         }
+      },
+      goOther(){
+          this.$router.push({name:'聯絡我們'});
       }
     },
   };
@@ -155,5 +164,23 @@
 
   .bottom {
     margin-top: 10px;
+  }
+
+  .center {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 0px;
+  }
+
+  .line {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid grey;
+  }
+
+  .other {
+    padding-top: 55px;
   }
 </style>

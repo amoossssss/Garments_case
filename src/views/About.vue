@@ -1,7 +1,7 @@
 <template>
   <el-container>
     <el-row :span="24" class="tac">
-      <el-col :span="5" class="sidemenu">
+      <el-col :span="4" class="sidemenu">
         <el-menu
           :default-active="$route.path"
           class="el-menu-vertical-demo"
@@ -30,7 +30,7 @@
         </el-menu>
       </el-col>
 
-      <el-col :offset="1" :span="18">
+      <el-col :offset="2" :span="18">
         <div class="rightcontent">
          <router-view></router-view>
         </div>
@@ -65,9 +65,8 @@
   }
 
   .el-menu-vertical-demo {
-    max-width: 150px;
-    /*margin: 20px auto;*/
 
+    /*margin: 20px auto;*/
   }
 
   .rightcontent {

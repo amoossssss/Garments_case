@@ -6,22 +6,22 @@
 
     <div class="desc_block">
       <el-row :span="24" >
-        <el-col :span="16">
-          <img src="../../assets/Materials/純棉1.jpg" class="main_img" alt="純棉1">
-        </el-col>
-        <el-col :span="8">
-          <h3 class="desc_title">純棉</h3>
-          <div class="desc_content">
-            <p>100% 純棉</p>
-            <p>分為20 支、30 支、40 支</p>
-            <p>支數越高 質地越細緻柔軟</p>
-            <p>輕薄柔 舒適吸汗</p>
-            <p>耐洗不變形</p>
-            <p>不褪色 不起球</p>
-            <br>
-            <p>適用於T 恤主料</p>
-          </div>
-        </el-col>
+        <!--<el-col :span="24">-->
+          <img src="../../assets/Materials/布料1.jpg" class="main_img" alt="純棉1">
+        <!--</el-col>-->
+        <!--<el-col :span="8">-->
+          <!--<h3 class="desc_title">純棉</h3>-->
+          <!--<div class="desc_content">-->
+            <!--<p>100% 純棉</p>-->
+            <!--<p>分為20 支、30 支、40 支</p>-->
+            <!--<p>支數越高 質地越細緻柔軟</p>-->
+            <!--<p>輕薄柔 舒適吸汗</p>-->
+            <!--<p>耐洗不變形</p>-->
+            <!--<p>不褪色 不起球</p>-->
+            <!--<br>-->
+            <!--<p>適用於T 恤主料</p>-->
+          <!--</div>-->
+        <!--</el-col>-->
       </el-row>
     </div>
     <div class="little_block">
@@ -44,20 +44,20 @@
 
     <div class="desc_block">
       <el-row :span="24" >
-        <el-col :span="16">
-          <img src="../../assets/Materials/吸濕1.jpg" class="main_img" alt="吸濕1">
-        </el-col>
-        <el-col :span="8">
-          <h3 class="desc_title_2">吸濕排汗</h3>
-          <div class="desc_content">
-            <p>100% 聚酯纖維</p>
-            <p>輕薄柔軟 舒適耐穿</p>
-            <p>吸汗快乾不黏貼</p>
-            <p>不褪色 不起球 不變形</p>
-            <br>
-            <p>適用於運動衫主料</p>
-          </div>
-        </el-col>
+        <!--<el-col :span="16">-->
+          <img src="../../assets/Materials/布料2.jpg" class="main_img" alt="吸濕1">
+        <!--</el-col>-->
+        <!--<el-col :span="8">-->
+          <!--<h3 class="desc_title_2">吸濕排汗</h3>-->
+          <!--<div class="desc_content">-->
+            <!--<p>100% 聚酯纖維</p>-->
+            <!--<p>輕薄柔軟 舒適耐穿</p>-->
+            <!--<p>吸汗快乾不黏貼</p>-->
+            <!--<p>不褪色 不起球 不變形</p>-->
+            <!--<br>-->
+            <!--<p>適用於運動衫主料</p>-->
+          <!--</div>-->
+        <!--</el-col>-->
       </el-row>
     </div>
     <div class="little_block">
@@ -80,20 +80,20 @@
 
     <div class="desc_block">
       <el-row :span="24" >
-        <el-col :span="16">
-          <img src="../../assets/Materials/polo1.jpg" class="main_img" alt="polo1">
-        </el-col>
-        <el-col :span="8">
-          <h3 class="desc_title_2">CVC 網眼</h3>
-          <div class="desc_content">
-            <p>35% 純棉</p>
-            <p>65% 聚酯纖維</p>
-            <p>柔軟舒適 挺拔防縮</p>
-            <p>不褪色 不起球 不變形</p>
-            <br>
-            <p>適用於 POLO 衫主料</p>
-          </div>
-        </el-col>
+        <!--<el-col :span="16">-->
+          <img src="../../assets/Materials/布料3.jpg" class="main_img" alt="polo1">
+        <!--</el-col>-->
+        <!--<el-col :span="8">-->
+          <!--<h3 class="desc_title_2">CVC 網眼</h3>-->
+          <!--<div class="desc_content">-->
+            <!--<p>35% 純棉</p>-->
+            <!--<p>65% 聚酯纖維</p>-->
+            <!--<p>柔軟舒適 挺拔防縮</p>-->
+            <!--<p>不褪色 不起球 不變形</p>-->
+            <!--<br>-->
+            <!--<p>適用於 POLO 衫主料</p>-->
+          <!--</div>-->
+        <!--</el-col>-->
       </el-row>
     </div>
     <div class="little_block">
@@ -221,7 +221,7 @@
 
   .desc_block {
     display: inline-block;
-    background-color: #d8d8db;
+    /*background-color: #d8d8db;*/
     margin-left: 20px;
     margin-right: 20px;
 
