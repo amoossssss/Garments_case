@@ -23,7 +23,7 @@ export default new Router({
   routes: [
     {path: '/', name: '', redirect: '/home'},
     {path: '/home', name: '主頁', component: Mainpage},
-    {path: '/about', name:'關於', component: Aboutpage, redirect:'/concept',
+    {path: '/about', name:'關於', component: Aboutpage, redirect:'/brandconcept',
       children:[
         {path:'/brandconcept', name:'品牌理念', component: BrandConcept},
         {path:'/materials', name:'布料材質', component: Materails},

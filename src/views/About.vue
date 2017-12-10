@@ -64,11 +64,6 @@
     min-width: 100%;
   }
 
-  .el-menu-vertical-demo {
-
-    /*margin: 20px auto;*/
-  }
-
   .rightcontent {
     background-color: #f2f2f2;
     /*height: 320px;*/
@@ -80,7 +75,7 @@
   }
 
   .item {
-    text-align: center;
-    font-size: medium;
+    /*text-align: center;*/
+    /*font-size: medium;*/
   }
 </style>

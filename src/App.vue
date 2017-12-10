@@ -1,41 +1,31 @@
 <template>
   <div id="app">
     <el-container id="container">
-      <el-header class="header">
+      <el-header class="header" height="90px">
         <div @click="goHome()">
           <img src="./assets/MainPage/logo.png" class="logo">
         </div>
         <div>
           <el-menu
             :default-active="$route.path"
-            class="el-menu-demo"
+            class="demo"
             mode="horizontal"
             @select="handleSelect"
             :router="true"
-            background-color="#676F77"
+            background-color=" #949494  "
             text-color="#fff"
             active-text-color="#f26531">
-            <!--<el-col :span="3">-->
-              <el-menu-item index="/home" class="menu">首頁</el-menu-item>
-            <!--</el-col>-->
-            <!--<el-col :span="3">-->
+              <el-menu-item index="/home">首頁</el-menu-item>
               <el-submenu index="/about">
                 <template slot="title">關於我們</template>
-                <el-menu-item index="/brandconcept">品牌概念</el-menu-item>
-                <el-menu-item index="/materials">布料材質</el-menu-item>
-                <el-menu-item index="/techniques">印刷技術</el-menu-item>
-                <el-menu-item index="/howtomaintain">保養方式</el-menu-item>
+                <el-menu-item index="/brandconcept" class="menu_title">品牌概念</el-menu-item>
+                <el-menu-item index="/materials" class="menu_title">布料材質</el-menu-item>
+                <el-menu-item index="/techniques" class="menu_title">印刷技術</el-menu-item>
+                <el-menu-item index="/howtomaintain" class="menu_title">保養方式</el-menu-item>
               </el-submenu>
-            <!--</el-col>-->
-            <!--<el-col :span="3">-->
               <el-menu-item index="/products">商品清單</el-menu-item>
-            <!--</el-col>-->
-            <!--<el-col :span="3">-->
               <el-menu-item index="/portfolio">歷年作品</el-menu-item>
-            <!--</el-col>-->
-            <!--<el-col :span="3">-->
               <el-menu-item index="/connectus">聯絡我們</el-menu-item>
-            <!--</el-col>-->
           </el-menu>
         </div>
       </el-header>
@@ -53,6 +43,7 @@
             <div class="contact">
               <h3>電子信箱 echoplus2016@gmail.com</h3>
               <h3>聯絡電話 02-8692-356</h3>
+              <h3>週一至週五 9:00-17:00</h3>
             </div>
             <h6>©echoplus. All Rights reserved</h6>
           </el-col>
@@ -108,29 +99,37 @@
     margin: 0 auto;
     max-width: 1600px;
     min-width: 1200px;
-    background-color: rgba(149,149,149,0.86);;
+    background-color: rgba(149,149,149,0.86);
   }
 
   /* 導覽目錄 */
-  header{z-index: 1000; transition: all 0.5s ease;  background-color: #676F77;}
+  header{z-index: 1000; transition: all 0.5s ease;  background-color: #949494;}
   /*header.header-fixed{position: fixed;top: 0;left: 0;right: 0;}*/
-  header .el-menu-demo{padding-left: 220px!important; float: right; margin-right: 42px}
+  header .demo{float: right; margin-right: 42px;height: 100%; margin-top: 30px;}
 
   /* 主内容區 */
-  main{    display: -webkit-box;  display: -ms-flexbox;  display: flex;  min-height: 950px;  border: solid 40px #d9d9d9; background-color: #d9d9d9;  }
+  main{ display: -webkit-box;  display: -ms-flexbox;  display: flex;  min-height: 950px;  border: solid 40px #d9d9d9; background-color: #d9d9d9;  }
   main .main-right{-webkit-box-flex: 1;  -ms-flex: 1;  flex: 1;  background-color: #fff; padding: 50px 70px; border-radius: 12px}
 
+  .el-submenu__title {
+    font-size: 24px;
+  }
+
+  .el-submenu__icon-arrow::before {
+    color: white;
+  }
+
   .el-footer{
-    background-color: rgba(145,145,145,0.76);
+    background-color: #676F77;
     /*#545c64*/
     color: #fff;
     padding-left: 80px;
   }
 
   .logo {
-    height: 55px;
+    height: 75px;
     margin-left: 60px;
-    margin-top: 2px;
+    margin-top: 5px;
     display: block;
     position: absolute;
     z-index: 1;
@@ -145,8 +144,11 @@
 
   .FB {
     width: 100%;
-    margin-top: 45%;
+    margin-top: 55%;
   }
 
+  .el-menu-item {
+    font-size: 24px;
+  }
 
 </style>

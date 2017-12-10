@@ -44,14 +44,15 @@
   .titleP {
     padding-top: 20px;
     padding-left: 20px;
+    letter-spacing: 3px;
   }
 
   .lineP {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 40px;
-    border-color: #5d5d5d;
     background-color: #5d5d5d;
+    border: 2px solid grey;
   }
 
   .imgP {
@@ -59,7 +60,7 @@
   }
 
   .descP {
-    font-size: small;
+    font-size: 16px;
   }
 
   .boxP {
@@ -73,7 +74,7 @@
 
   .textP {
     background-color: whitesmoke;
-    font-size: medium;
+    font-size: 20px;
     text-align: center;
   }
 </style>

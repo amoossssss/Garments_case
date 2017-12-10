@@ -125,8 +125,8 @@
   }
 
   .decoration {
-    border-top: 2px solid grey;
-    border-bottom: 2px solid grey;
+    border-top: 3px solid grey;
+    border-bottom: 3px solid grey;
   }
 
   .features-title {
@@ -134,6 +134,8 @@
     margin-bottom: 5px;
     margin-top: 5px;
     color: grey;
+    font-size: 24px;
+    letter-spacing: 3px;
   }
 
   .items {
@@ -165,7 +167,6 @@
   }
 
   .text {
-    /*background-color: gainsboro;*/
     color: black;
     font-size: 24px;
     font-weight: bolder;

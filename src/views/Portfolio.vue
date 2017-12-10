@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="center">歷年作品</h1>
-    <hr class="line">
+    <hr class="linePort">
     <!--作品區-->
     <el-row :span="24" class="portfolio" justify="space-around" type="flex">
 
@@ -137,9 +137,10 @@
     text-align: center;
     font-size: 32px;
     margin-bottom: 0px;
+    letter-spacing: 3px;
   }
 
-  .line {
+  .linePort {
     margin-bottom: 30px;
     margin-top: 10px;
     margin-left: 20px;

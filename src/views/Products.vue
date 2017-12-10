@@ -1,41 +1,47 @@
 <template>
   <div>
     <h1 class="center">產品清單</h1>
-    <hr class="line">
+    <hr class="linePro">
     <!--商品區-->
     <el-row :span="24" class="products" justify="space-around" type="flex">
 
-      <el-col :span="7" >
+      <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Product/Ｔ恤小圖.jpg" class="image">
+          <div @click="goDetails('tshirt')">
+            <img src="../assets/Product/Ｔ恤小圖.jpg" class="image">
+          </div>
           <div style="padding: 14px;" class="work">
             <span class="item_name">T恤</span>
             <div class="bottom clearfix">
-              <el-button type="info" round @click="goDetails('tshirt')">商品詳情</el-button>
+              <el-button type="info" round @click="goDetails('tshirt')" class="custom">商品詳情</el-button>
             </div>
           </div>
         </el-card>
       </el-col>
 
-      <el-col :span="7" >
+      <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Product/polo小圖.jpg" class="image">
+          <div @click="goDetails('polo')">
+            <img src="../assets/Product/polo小圖.jpg" class="image">
+          </div>
           <div style="padding: 14px;" class="work">
             <span class="item_name">POLO衫</span>
             <div class="bottom clearfix">
-              <el-button type="" round @click="goDetails('polo')">商品詳情</el-button>
+              <el-button type="info" round @click="goDetails('polo')" class="custom">商品詳情</el-button>
             </div>
           </div>
         </el-card>
       </el-col>
 
-      <el-col :span="7" >
+      <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Product/帽T小圖.jpg" class="image">
+          <div @click="goDetails('hoodie')">
+            <img src="../assets/Product/帽T小圖.jpg" class="image">
+          </div>
           <div style="padding: 14px;" class="work">
             <span class="item_name">帽T</span>
             <div class="bottom clearfix">
-              <el-button type="info" round @click="goDetails('hoodie')">商品詳情</el-button>
+              <el-button type="info" round @click="goDetails('hoodie')" class="custom">商品詳情</el-button>
             </div>
           </div>
         </el-card>
@@ -45,32 +51,36 @@
 
     <el-row :span="24" class="products" justify="space-around" type="flex">
 
-      <el-col :span="7" >
+      <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Product/帆布袋.jpg" class="image">
+          <div @click="goDetails('bag')">
+            <img src="../assets/Product/帆布袋.jpg" class="image">
+          </div>
           <div style="padding: 14px;" class="work">
             <span class="item_name">帆布袋</span>
             <div class="bottom clearfix">
-              <el-button type="" round @click="goDetails('bag')">商品詳情</el-button>
+              <el-button type="info" round @click="goDetails('bag')" class="custom">商品詳情</el-button>
             </div>
           </div>
         </el-card>
       </el-col>
 
-      <el-col :span="7" >
+      <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Product/帽小.jpg" class="image">
+          <div @click="goDetails('hat')">
+            <img src="../assets/Product/帽小.jpg" class="image">
+          </div>
           <div style="padding: 14px;" class="work">
             <span class="item_name">帽子</span>
             <div class="bottom clearfix">
-              <el-button type="info" round @click="goDetails('hat')">商品詳情</el-button>
+              <el-button type="info" round @click="goDetails('hat')" class="custom">商品詳情</el-button>
             </div>
           </div>
         </el-card>
       </el-col>
 
       <!--排版需求-->
-      <el-col :span="7" >
+      <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
           <div @click="goOther()">
             <img src="../../src/assets/Product/其他商品.jpg" class="image" id="other">
@@ -156,6 +166,7 @@
 
   .work {
     text-align: center;
+    background-color: darkgrey;
   }
 
   .item_name {
@@ -170,17 +181,19 @@
     text-align: center;
     font-size: 32px;
     margin-bottom: 0px;
+    letter-spacing: 3px;
   }
 
-  .line {
+  .linePro {
     margin-bottom: 30px;
     margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 45px;
+    margin-right: 45px;
     border: 2px solid grey;
   }
 
-  .other {
-    padding-top: 55px;
+  .custom {
+    background-color: white;
+    color: grey;
   }
 </style>

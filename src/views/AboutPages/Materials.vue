@@ -186,7 +186,6 @@
         dialogVisible7: false,
         dialogVisible8: false,
         dialogVisible9: false,
-
       };
     }
   };
@@ -196,14 +195,14 @@
   .titleM {
     padding-top: 20px;
     padding-left: 20px;
+    letter-spacing: 3px;
   }
 
   .lineM {
     margin-left: 20px;
     margin-right: 20px;
     margin-bottom: 40px;
-    border-color: #5d5d5d;
-    background-color: #5d5d5d;
+    border: 2px solid grey;
   }
 
   .main_img {

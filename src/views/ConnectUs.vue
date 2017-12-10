@@ -242,6 +242,7 @@
     text-align: center;
     color: #f8ab35;
     padding-top: 5px;
+    letter-spacing: 3px;
   }
 
   .sentence {
