@@ -112,7 +112,7 @@
   main .main-right{-webkit-box-flex: 1;  -ms-flex: 1;  flex: 1;  background-color: #fff; padding: 50px 70px; border-radius: 12px}
 
   .el-submenu__title {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .el-submenu__icon-arrow::before {
@@ -148,7 +148,7 @@
   }
 
   .el-menu-item {
-    font-size: 24px;
+    font-size: 20px;
   }
 
 </style>
