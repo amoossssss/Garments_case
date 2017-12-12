@@ -36,7 +36,7 @@
       <el-col :offset="2" :span="18">
         <el-row :span="24" justify="center" type="flex" class="product">
           <el-col :span="8">
-            <img src="../../assets/Product/Ｔ恤小圖.jpg" class="item_image">
+            <img src="../../assets/Product/T恤小圖.jpg" class="item_image">
           </el-col>
           <el-col :offset="2" :span="14">
             <p class="item_title">T恤</p>

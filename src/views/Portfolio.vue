@@ -1,13 +1,16 @@
 <template>
   <div>
-    <h1 class="center">歷年作品</h1>
-    <hr class="linePort">
+    <el-row justify="space-around" type="flex">
+      <el-col :span="23">
+        <img src="../../src/assets/Portfolio/歷年作品.jpg" class="title_image">
+      </el-col>
+    </el-row>
     <!--作品區-->
     <el-row :span="24" class="portfolio" justify="space-around" type="flex">
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth1.jpg" class="image">
+          <img src="../assets/Portfolio/cloth1.jpg" class="product_image">
           <div style="padding: 14px;" class="work">
             <span>百樂</span>
             <span class="year">2017</span>
@@ -17,7 +20,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth2.jpg" class="image">
+          <img src="../assets/Portfolio/cloth2.jpg" class="product_image">
           <div style="padding: 14px;" class="work">
             <span>政大財經</span>
             <span class="year">2017</span>
@@ -27,7 +30,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth3.jpg" class="image">
+          <img src="../assets/Portfolio/cloth3.jpg" class="product_image">
           <div style="padding: 14px;" class="work">
             <span>Juniper</span>
             <span class="year">2017</span>
@@ -41,7 +44,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth4.jpg" class="image">
+          <img src="../assets/Portfolio/cloth4.jpg" class="product_image">
           <div style="padding: 14px;" class="work">
             <span>光紅建聖</span>
             <span class="year">2016</span>
@@ -51,7 +54,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth5.jpg" class="image">
+          <img src="../assets/Portfolio/cloth5.jpg" class="product_image">
           <div style="padding: 14px; " class="work">
             <span>國光劇團</span>
             <span class="year">2016</span>
@@ -61,7 +64,7 @@
 
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
-          <img src="../assets/Portfolio/cloth6.jpg" class="image">
+          <img src="../assets/Portfolio/cloth6.jpg" class="product_image">
           <div style="padding: 14px;" class="work">
             <span>妮樂佛創意有限公司</span>
             <span class="year">2016</span>
@@ -109,13 +112,12 @@
   }
 
   .pages {
-    /*position: static;*/
     padding-top: 40%;
     text-align: center;
   }
 
 
-  .image {
+  .product_image {
     width: 100%;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -133,18 +135,9 @@
     font-size: small;
   }
 
-  .center {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 0px;
-    letter-spacing: 3px;
+  .title_image {
+    width: 100%;
+    margin-bottom: 50px;
   }
 
-  .linePort {
-    margin-bottom: 30px;
-    margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    border: 2px solid grey;
-  }
 </style>

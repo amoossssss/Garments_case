@@ -1,16 +1,19 @@
 <template>
   <div>
-    <h1 class="center">產品清單</h1>
-    <hr class="linePro">
+    <el-row justify="space-around" type="flex">
+      <el-col :span="22">
+        <img src="../../src/assets/Product/商品清單.jpg" class="title_image">
+      </el-col>
+    </el-row>
     <!--商品區-->
     <el-row :span="24" class="products" justify="space-around" type="flex">
 
       <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
           <div @click="goDetails('tshirt')">
-            <img src="../assets/Product/Ｔ恤小圖.jpg" class="image">
+            <img src="../assets/Product/T恤小圖.jpg" class="box_image">
           </div>
-          <div style="padding: 14px;" class="work">
+          <div style="padding: 14px;" class="workP">
             <span class="item_name">T恤</span>
             <div class="bottom clearfix">
               <el-button type="info" round @click="goDetails('tshirt')" class="custom">商品詳情</el-button>
@@ -22,9 +25,9 @@
       <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
           <div @click="goDetails('polo')">
-            <img src="../assets/Product/polo小圖.jpg" class="image">
+            <img src="../assets/Product/polo小圖.jpg" class="box_image">
           </div>
-          <div style="padding: 14px;" class="work">
+          <div style="padding: 14px;" class="workP">
             <span class="item_name">POLO衫</span>
             <div class="bottom clearfix">
               <el-button type="info" round @click="goDetails('polo')" class="custom">商品詳情</el-button>
@@ -36,9 +39,9 @@
       <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
           <div @click="goDetails('hoodie')">
-            <img src="../assets/Product/帽T小圖.jpg" class="image">
+            <img src="../assets/Product/帽T小圖.jpg" class="box_image">
           </div>
-          <div style="padding: 14px;" class="work">
+          <div style="padding: 14px;" class="workP">
             <span class="item_name">帽T</span>
             <div class="bottom clearfix">
               <el-button type="info" round @click="goDetails('hoodie')" class="custom">商品詳情</el-button>
@@ -54,9 +57,9 @@
       <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
           <div @click="goDetails('bag')">
-            <img src="../assets/Product/帆布袋.jpg" class="image">
+            <img src="../assets/Product/帆布袋.jpg" class="box_image">
           </div>
-          <div style="padding: 14px;" class="work">
+          <div style="padding: 14px;" class="workP">
             <span class="item_name">帆布袋</span>
             <div class="bottom clearfix">
               <el-button type="info" round @click="goDetails('bag')" class="custom">商品詳情</el-button>
@@ -68,9 +71,9 @@
       <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
           <div @click="goDetails('hat')">
-            <img src="../assets/Product/帽小.jpg" class="image">
+            <img src="../assets/Product/帽小.jpg" class="box_image">
           </div>
-          <div style="padding: 14px;" class="work">
+          <div style="padding: 14px;" class="workP">
             <span class="item_name">帽子</span>
             <div class="bottom clearfix">
               <el-button type="info" round @click="goDetails('hat')" class="custom">商品詳情</el-button>
@@ -83,7 +86,7 @@
       <el-col :span="6" >
         <el-card :body-style="{ padding: '0px' }">
           <div @click="goOther()">
-            <img src="../../src/assets/Product/其他商品.jpg" class="image" id="other">
+            <img src="../../src/assets/Product/其他商品.jpg" class="box_image" id="other">
           </div>
         </el-card>
       </el-col>
@@ -154,19 +157,21 @@
   }
 
   .pages {
-    /*position: static;*/
     padding-top: 40%;
     text-align: center;
   }
 
-  .image {
+  .box_image {
     width: 100%;
   }
 
+  .title_image {
+    width: 100%;
+    margin-bottom: 50px;
+  }
 
-  .work {
+  .workP {
     text-align: center;
-    background-color: darkgrey;
   }
 
   .item_name {
@@ -177,23 +182,9 @@
     margin-top: 10px;
   }
 
-  .center {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 0px;
-    letter-spacing: 3px;
-  }
-
-  .linePro {
-    margin-bottom: 30px;
-    margin-top: 10px;
-    margin-left: 45px;
-    margin-right: 45px;
-    border: 2px solid grey;
-  }
-
   .custom {
     background-color: white;
     color: grey;
   }
+
 </style>

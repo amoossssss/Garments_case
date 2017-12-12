@@ -4,70 +4,73 @@
 
       <el-col :span="10" class="orderflow">
         <h2 class="try1">訂貨流程</h2>
-        <el-row :span="24" class="flow_box">
-          <el-col :offset="3" :span="3">
-            <img src="../../src/assets/connectUs/1.png" class="flow_img">
+        <el-row :span="24"  class="flow_box" type="flex" justify="center">
+          <el-col :span="20">
+            <img src="../../src/assets/connectUs/訂貨流程.png" class="flow_img">
           </el-col>
-          <el-col :offset="1" :span="16">
-            <p class="flow_desc">填寫線上表單，告知需求</p>
-          </el-col>
-        </el-row>
-        <el-row :span="24" class="flow_box">
-          <el-col :offset="3" :span="3">
-            <img src="../../src/assets/connectUs/2.png" class="flow_img">
-          </el-col>
-          <el-col :offset="1" :span="16">
-            <p class="flow_desc">雙方確認報價</p>
-          </el-col>
-        </el-row>
-        <el-row :span="24" class="flow_box">
-          <el-col :offset="3" :span="3">
-            <img src="../../src/assets/connectUs/3.png" class="flow_img">
-          </el-col>
-          <el-col :offset="1" :span="16">
-            <p class="flow_desc">訂單確立，支付1/2訂金</p>
-          </el-col>
-        </el-row>
-        <el-row :span="24" class="flow_box">
-          <el-col :offset="3" :span="3">
-            <img src="../../src/assets/connectUs/4.png" class="flow_img">
-          </el-col>
-          <el-col :offset="1" :span="16">
-            <p class="flow_desc">套量衣服，確認尺寸</p>
-          </el-col>
-        </el-row>
-        <el-row :span="24" class="flow_box">
-          <el-col :offset="3" :span="3">
-            <img src="../../src/assets/connectUs/5.png" class="flow_img">
-          </el-col>
-          <el-col :offset="1" :span="16">
-            <p class="flow_desc">校對設計圖(顏色、圖案大小)</p>
-            <p class="flow_desc">開版打樣</p>
-          </el-col>
-        </el-row>
-        <el-row :span="24" class="flow_box">
-          <el-col :offset="3" :span="3">
-            <img src="../../src/assets/connectUs/6.png" class="flow_img">
-          </el-col>
-          <el-col :offset="1" :span="16">
-            <p class="flow_desc">客戶確認尺寸數量</p>
-          </el-col>
-        </el-row>
-        <el-row :span="24" class="flow_box">
-          <el-col :offset="3" :span="3">
-            <img src="../../src/assets/connectUs/7.png" class="flow_img">
-          </el-col>
-          <el-col :offset="1" :span="16">
-            <p class="flow_desc">等候產品製作</p>
-          </el-col>
-        </el-row>
-        <el-row :span="24" class="flow_box">
-          <el-col :offset="3" :span="3">
-            <img src="../../src/assets/connectUs/8.png" class="flow_img">
-          </el-col>
-          <el-col :offset="1" :span="16">
-            <p class="flow_desc">收貨並支付尾款</p>
-          </el-col>
+          <!--<el-col :offset="3" :span="3">-->
+            <!--<img src="../../src/assets/connectUs/1.png" class="flow_img">-->
+          <!--</el-col>-->
+          <!--<el-col :offset="1" :span="16">-->
+            <!--<p class="flow_desc">填寫線上表單，告知需求</p>-->
+          <!--</el-col>-->
+        <!--</el-row>-->
+        <!--<el-row :span="24" class="flow_box">-->
+          <!--<el-col :offset="3" :span="3">-->
+            <!--<img src="../../src/assets/connectUs/2.png" class="flow_img">-->
+          <!--</el-col>-->
+          <!--<el-col :offset="1" :span="16">-->
+            <!--<p class="flow_desc">雙方確認報價</p>-->
+          <!--</el-col>-->
+        <!--</el-row>-->
+        <!--<el-row :span="24" class="flow_box">-->
+          <!--<el-col :offset="3" :span="3">-->
+            <!--<img src="../../src/assets/connectUs/3.png" class="flow_img">-->
+          <!--</el-col>-->
+          <!--<el-col :offset="1" :span="16">-->
+            <!--<p class="flow_desc">訂單確立，支付1/2訂金</p>-->
+          <!--</el-col>-->
+        <!--</el-row>-->
+        <!--<el-row :span="24" class="flow_box">-->
+          <!--<el-col :offset="3" :span="3">-->
+            <!--<img src="../../src/assets/connectUs/4.png" class="flow_img">-->
+          <!--</el-col>-->
+          <!--<el-col :offset="1" :span="16">-->
+            <!--<p class="flow_desc">套量衣服，確認尺寸</p>-->
+          <!--</el-col>-->
+        <!--</el-row>-->
+        <!--<el-row :span="24" class="flow_box">-->
+          <!--<el-col :offset="3" :span="3">-->
+            <!--<img src="../../src/assets/connectUs/5.png" class="flow_img">-->
+          <!--</el-col>-->
+          <!--<el-col :offset="1" :span="16">-->
+            <!--<p class="flow_desc">校對設計圖(顏色、圖案大小)</p>-->
+            <!--<p class="flow_desc">開版打樣</p>-->
+          <!--</el-col>-->
+        <!--</el-row>-->
+        <!--<el-row :span="24" class="flow_box">-->
+          <!--<el-col :offset="3" :span="3">-->
+            <!--<img src="../../src/assets/connectUs/6.png" class="flow_img">-->
+          <!--</el-col>-->
+          <!--<el-col :offset="1" :span="16">-->
+            <!--<p class="flow_desc">客戶確認尺寸數量</p>-->
+          <!--</el-col>-->
+        <!--</el-row>-->
+        <!--<el-row :span="24" class="flow_box">-->
+          <!--<el-col :offset="3" :span="3">-->
+            <!--<img src="../../src/assets/connectUs/7.png" class="flow_img">-->
+          <!--</el-col>-->
+          <!--<el-col :offset="1" :span="16">-->
+            <!--<p class="flow_desc">等候產品製作</p>-->
+          <!--</el-col>-->
+        <!--</el-row>-->
+        <!--<el-row :span="24" class="flow_box">-->
+          <!--<el-col :offset="3" :span="3">-->
+            <!--<img src="../../src/assets/connectUs/8.png" class="flow_img">-->
+          <!--</el-col>-->
+          <!--<el-col :offset="1" :span="16">-->
+            <!--<p class="flow_desc">收貨並支付尾款</p>-->
+          <!--</el-col>-->
         </el-row>
       </el-col>
 
@@ -88,6 +91,7 @@
                 <el-option label="POLO衫" value="polo"></el-option>
                 <el-option label="帽T" value="hoodie"></el-option>
                 <el-option label="帆布袋" value="bag"></el-option>
+                <el-option label="其他" value="other"></el-option>
               </el-select>
             </el-form-item>
             <el-form-item label="顏色" prop="color">

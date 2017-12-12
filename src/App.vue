@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <el-container id="container">
-      <el-header class="header" height="90px">
+      <el-header class="header" height="80px">
         <div @click="goHome()">
           <img src="./assets/MainPage/logo.png" class="logo">
         </div>
@@ -12,8 +12,8 @@
             mode="horizontal"
             @select="handleSelect"
             :router="true"
-            background-color=" #949494  "
-            text-color="#fff"
+            background-color=" #fdfdfd  "
+            text-color="#565656"
             active-text-color="#f26531">
               <el-menu-item index="/home">首頁</el-menu-item>
               <el-submenu index="/about">
@@ -36,7 +36,7 @@
         </div>
       </el-main>
 
-      <el-footer height="">
+      <el-footer height="auto">
         <el-row>
           <el-col :span="10">
             <h2>SERVICE</h2>
@@ -47,9 +47,9 @@
             </div>
             <h6>©echoplus. All Rights reserved</h6>
           </el-col>
-          <el-col :span="3" :offset="9">
+          <el-col :span="4" :offset="8">
             <a target="_blank" href="https://facebook.com/echoplus2016/">
-              <img src="./assets/MainPage/FB.jpg" class="FB">
+              <img src="./assets/MainPage/FB.png" class="FB">
             </a>
           </el-col>
         </el-row>
@@ -103,31 +103,31 @@
   }
 
   /* 導覽目錄 */
-  header{z-index: 1000; transition: all 0.5s ease;  background-color: #949494;}
+  header{z-index: 1000; transition: all 0.5s ease;  background-color: #fdfdfd;}
   /*header.header-fixed{position: fixed;top: 0;left: 0;right: 0;}*/
-  header .demo{float: right; margin-right: 42px;height: 100%; margin-top: 30px;}
+  header .demo{float: right; margin-right: 42px;height: 100%; margin-top: 20px;}
 
   /* 主内容區 */
   main{ display: -webkit-box;  display: -ms-flexbox;  display: flex;  min-height: 950px;  border: solid 40px #d9d9d9; background-color: #d9d9d9;  }
-  main .main-right{-webkit-box-flex: 1;  -ms-flex: 1;  flex: 1;  background-color: #fff; padding: 50px 70px; border-radius: 12px}
+  main .main-right{-webkit-box-flex: 1;  -ms-flex: 1;  flex: 1;  background-color: #fff; padding: 50px 70px; border-radius: 5px; border: 3px solid #676F77;}
 
   .el-submenu__title {
     font-size: 20px;
   }
 
   .el-submenu__icon-arrow::before {
-    color: white;
+    color: #565656;
   }
 
   .el-footer{
-    background-color: #676F77;
+    background-color: #898989;
     /*#545c64*/
-    color: #fff;
+    color: #ffffff;
     padding-left: 80px;
   }
 
   .logo {
-    height: 75px;
+    height: 70px;
     margin-left: 60px;
     margin-top: 5px;
     display: block;
@@ -144,7 +144,7 @@
 
   .FB {
     width: 100%;
-    margin-top: 55%;
+    margin-top: 25%;
   }
 
   .el-menu-item {
