@@ -18,7 +18,7 @@
               <el-menu-item index="/home">首頁</el-menu-item>
               <el-submenu index="/about">
                 <template slot="title">關於我們</template>
-                <el-menu-item index="/brandconcept" class="menu_title">品牌概念</el-menu-item>
+                <el-menu-item index="/brandconcept" class="menu_title">品牌理念</el-menu-item>
                 <el-menu-item index="/materials" class="menu_title">布料材質</el-menu-item>
                 <el-menu-item index="/techniques" class="menu_title">印刷技術</el-menu-item>
                 <el-menu-item index="/howtomaintain" class="menu_title">保養方式</el-menu-item>
@@ -42,7 +42,7 @@
             <h2>SERVICE</h2>
             <div class="contact">
               <h3>電子信箱 echoplus2016@gmail.com</h3>
-              <h3>聯絡電話 02-8692-356</h3>
+              <h3>聯絡電話 ：(02)8692-3526 / 0975-010-399</h3>
               <h3>週一至週五 9:00-17:00</h3>
             </div>
             <h6>©echoplus. All Rights reserved</h6>
@@ -92,7 +92,7 @@
 
   #app {
     background-color: #e6e6e6;
-    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    font-family: Helvetica,  "Hiragino Sans GB", sans-serif;
   }
 
   #container {
@@ -109,7 +109,7 @@
 
   /* 主内容區 */
   main{ display: -webkit-box;  display: -ms-flexbox;  display: flex;  min-height: 950px;  border: solid 40px #d9d9d9; background-color: #d9d9d9;  }
-  main .main-right{-webkit-box-flex: 1;  -ms-flex: 1;  flex: 1;  background-color: #fff; padding: 50px 70px; border-radius: 5px; border: 3px solid #676F77;}
+  main .main-right{-webkit-box-flex: 1;  -ms-flex: 1;  flex: 1;  background-color: #fff; padding: 50px 70px; border-radius: 5px;}
 
   .el-submenu__title {
     font-size: 20px;
@@ -133,6 +133,7 @@
     display: block;
     position: absolute;
     z-index: 1;
+    cursor: pointer;
   }
 
   .contact {

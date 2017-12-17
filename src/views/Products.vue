@@ -163,6 +163,7 @@
 
   .box_image {
     width: 100%;
+    cursor: pointer;
   }
 
   .title_image {

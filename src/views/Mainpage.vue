@@ -5,13 +5,13 @@
         <div class="block">
         <el-carousel indicator-position="outside" height="600px">
           <el-carousel-item  :key="1">
-           <img src="../assets/MainPage/banner1.jpg" class="carousel-img">
+            <img src="../assets/MainPage/banner1.jpg" class="carousel-img">
           </el-carousel-item>
           <el-carousel-item  :key="2">
-            <img src="../assets/MainPage/banner2.jpg" class="carousel-img">
+            <div @click="product('Tshirt')" class="bannerClick"><img src="../assets/MainPage/banner2.jpg" class="carousel-img"></div>
           </el-carousel-item>
           <el-carousel-item  :key="3">
-            <img src="../assets/MainPage/banner3.jpg" class="carousel-img">
+            <div @click="goMaterial()" class="bannerClick"><img src="../assets/MainPage/banner3.jpg" class="carousel-img"></div>
           </el-carousel-item>
         </el-carousel>
         </div>
@@ -84,6 +84,7 @@
   import ElRow from "element-ui/packages/row/src/row";
   import ElCol from "element-ui/packages/col/src/col";
   import ElButton from "../../node_modules/element-ui/packages/button/src/button";
+
   export default {
     components: {
       ElButton,
@@ -104,6 +105,9 @@
             if(name=='Bag'){
               this.$router.push({name:'帆布袋'}) ;
             }
+        },
+        goMaterial(){
+            this.$router.push({name:'布料材質'}) ;
         }
 
     },
@@ -156,6 +160,7 @@
 
   .item {
     position: relative;
+    cursor: pointer;
   }
 
   .item:hover .middle {
@@ -174,5 +179,9 @@
     border-top: 3px solid black;
     border-bottom: 3px solid black;
     letter-spacing: 3px;
+  }
+
+  .bannerClick {
+    cursor: pointer;
   }
 </style>
