@@ -3,79 +3,16 @@
     <el-row :span="24" class="connectus">
 
       <el-col :span="10" class="orderflow">
-        <h2 class="try1">訂貨流程</h2>
+        <h2 class="titleC">訂貨流程</h2>
         <el-row :span="24"  class="flow_box" type="flex" justify="center">
           <el-col :span="20">
             <img src="../../src/assets/connectUs/訂貨流程.png" class="flow_img">
           </el-col>
-          <!--<el-col :offset="3" :span="3">-->
-            <!--<img src="../../src/assets/connectUs/1.png" class="flow_img">-->
-          <!--</el-col>-->
-          <!--<el-col :offset="1" :span="16">-->
-            <!--<p class="flow_desc">填寫線上表單，告知需求</p>-->
-          <!--</el-col>-->
-        <!--</el-row>-->
-        <!--<el-row :span="24" class="flow_box">-->
-          <!--<el-col :offset="3" :span="3">-->
-            <!--<img src="../../src/assets/connectUs/2.png" class="flow_img">-->
-          <!--</el-col>-->
-          <!--<el-col :offset="1" :span="16">-->
-            <!--<p class="flow_desc">雙方確認報價</p>-->
-          <!--</el-col>-->
-        <!--</el-row>-->
-        <!--<el-row :span="24" class="flow_box">-->
-          <!--<el-col :offset="3" :span="3">-->
-            <!--<img src="../../src/assets/connectUs/3.png" class="flow_img">-->
-          <!--</el-col>-->
-          <!--<el-col :offset="1" :span="16">-->
-            <!--<p class="flow_desc">訂單確立，支付1/2訂金</p>-->
-          <!--</el-col>-->
-        <!--</el-row>-->
-        <!--<el-row :span="24" class="flow_box">-->
-          <!--<el-col :offset="3" :span="3">-->
-            <!--<img src="../../src/assets/connectUs/4.png" class="flow_img">-->
-          <!--</el-col>-->
-          <!--<el-col :offset="1" :span="16">-->
-            <!--<p class="flow_desc">套量衣服，確認尺寸</p>-->
-          <!--</el-col>-->
-        <!--</el-row>-->
-        <!--<el-row :span="24" class="flow_box">-->
-          <!--<el-col :offset="3" :span="3">-->
-            <!--<img src="../../src/assets/connectUs/5.png" class="flow_img">-->
-          <!--</el-col>-->
-          <!--<el-col :offset="1" :span="16">-->
-            <!--<p class="flow_desc">校對設計圖(顏色、圖案大小)</p>-->
-            <!--<p class="flow_desc">開版打樣</p>-->
-          <!--</el-col>-->
-        <!--</el-row>-->
-        <!--<el-row :span="24" class="flow_box">-->
-          <!--<el-col :offset="3" :span="3">-->
-            <!--<img src="../../src/assets/connectUs/6.png" class="flow_img">-->
-          <!--</el-col>-->
-          <!--<el-col :offset="1" :span="16">-->
-            <!--<p class="flow_desc">客戶確認尺寸數量</p>-->
-          <!--</el-col>-->
-        <!--</el-row>-->
-        <!--<el-row :span="24" class="flow_box">-->
-          <!--<el-col :offset="3" :span="3">-->
-            <!--<img src="../../src/assets/connectUs/7.png" class="flow_img">-->
-          <!--</el-col>-->
-          <!--<el-col :offset="1" :span="16">-->
-            <!--<p class="flow_desc">等候產品製作</p>-->
-          <!--</el-col>-->
-        <!--</el-row>-->
-        <!--<el-row :span="24" class="flow_box">-->
-          <!--<el-col :offset="3" :span="3">-->
-            <!--<img src="../../src/assets/connectUs/8.png" class="flow_img">-->
-          <!--</el-col>-->
-          <!--<el-col :offset="1" :span="16">-->
-            <!--<p class="flow_desc">收貨並支付尾款</p>-->
-          <!--</el-col>-->
         </el-row>
       </el-col>
 
       <el-col :offset="2" :span="12" class="connect">
-        <h2 class="try1">聯絡我們</h2>
+        <h2 class="titleC">聯絡我們</h2>
         <h6 class="sentence">想進一步了解產品或服務,歡迎您與我們聯繫!</h6>
         <div class="form">
           <el-form :model="ruleForm" :rules="rules" ref="ruleForm" statusIcon label-width="100px" class="demo-ruleForm" >
@@ -117,7 +54,11 @@
                 <el-option label="深灰" value="18"></el-option>
                 <el-option label="黑色" value="12"></el-option>
               </el-select>
+              <el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>
             </el-form-item>
+            <!--<el-form-item>-->
+              <!--<el-button type="info" @click="dialogVisible = true">查看色碼錶</el-button>-->
+            <!--</el-form-item>-->
             <el-form-item label="件數" prop="numbers">
               <el-input v-model="ruleForm.numbers"></el-input>
             </el-form-item>
@@ -146,6 +87,11 @@
       </el-col>
 
     </el-row>
+
+    <el-dialog title="色碼錶" :visible.sync="dialogVisible" width="70%">
+      <img src="../../src/assets/Product/顏色.jpg" class="flow_img">
+    </el-dialog>
+
   </el-container>
 </template>
 
@@ -153,14 +99,17 @@
   import ElFormItem from "../../node_modules/element-ui/packages/form/src/form-item.vue";
   import ElRow from "element-ui/packages/row/src/row";
   import ElCol from "element-ui/packages/col/src/col";
+  import ElButton from "../../node_modules/element-ui/packages/button/src/button";
 
   export default {
     components: {
+      ElButton,
       ElCol,
       ElRow,
       ElFormItem},
     data() {
       return {
+        dialogVisible: false,
         ruleForm: {
           name: '',
           mail: '',
@@ -214,7 +163,7 @@
         console.log(file);
       },
       handleExceed(files, fileList) {
-        this.$message.warning(`限制選擇1 個文件，您選擇了 ${files.length} 个文件，共選擇了 ${files.length + fileList.length} 個文件`);
+        this.$message.warning(`限制選擇 1 個文件，您選擇了 ${files.length} 個文件，共選擇了 ${files.length + fileList.length} 個文件`);
       }
     }
   }
@@ -242,7 +191,7 @@
 
   }
 
-  .try1 {
+  .titleC {
     text-align: center;
     color: #f8ab35;
     padding-top: 5px;
@@ -265,8 +214,8 @@
     padding-bottom: 15px;
   }
 
-  .flow_desc {
-    font-size: small;
+  .colorButton {
+    margin-left: 20px;
   }
 
 </style>
