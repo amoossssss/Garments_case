@@ -15,6 +15,11 @@ import Polo from '../views/ProductPages/Polo.vue'
 import Bag from '../views/ProductPages/Bag.vue'
 import Hoodie from '../views/ProductPages/Hoodie.vue'
 import Hat from '../views/ProductPages/Hat.vue'
+import P_all from '../views/PortfollioPages/P_all.vue'
+import P_tshirt from '../views/PortfollioPages/P_tshirt.vue'
+import P_polo from '../views/PortfollioPages/P_polo.vue'
+import P_coat from '../views/PortfollioPages/P_coat.vue'
+import P_other from '../views/PortfollioPages/P_other.vue'
 
 Vue.use(Router)
 
@@ -36,7 +41,14 @@ export default new Router({
     {path: '/bag', name:'帆布袋', component: Bag},
     {path: '/hoodie', name:'帽T', component: Hoodie},
     {path: '/hat', name:'帽子', component: Hat},
-    {path: '/portfolio', name: '歷年作品', component: Portfolio},
+    {path: '/portfolio', name: '歷年作品', component: Portfolio,redirect:'/all',
+      children:[
+        {path:'/all',name:'全部分類',component:P_all},
+        {path:'/tshirts',name:'T恤分類',component:P_tshirt},
+        {path:'/polos',name:'polo分類',component:P_polo},
+        {path:'/coats',name:'外套分類',component:P_coat},
+        {path:'/others',name:'其他分類',component:P_other},
+      ]},
     {path: '/connectus', name: '聯絡我們', component: ConnectUs},
 
   ]

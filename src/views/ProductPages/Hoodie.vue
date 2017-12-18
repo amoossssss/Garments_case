@@ -5,8 +5,6 @@
         <el-menu
           :default-active="$route.path"
           class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
           :router="true"
           backgroundColor="#f2f2f2"
           text-color="#191919"

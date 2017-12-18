@@ -26,7 +26,7 @@
               <el-select v-model="ruleForm.clothType" placeholder="請選擇款式">
                 <el-option label="T恤" value="t-shirt"></el-option>
                 <el-option label="POLO衫" value="polo"></el-option>
-                <el-option label="帽T" value="hoodie"></el-option>
+                <el-option label="帽T" value="hㄕoodie"></el-option>
                 <el-option label="帆布袋" value="bag"></el-option>
                 <el-option label="其他" value="other"></el-option>
               </el-select>

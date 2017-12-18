@@ -32,7 +32,9 @@
 
       <el-main>
         <div  class="main-right" >
-          <router-view class="view"></router-view>
+          <transition name="el-fade-in-linear">
+            <router-view class="view"></router-view>
+          </transition>
         </div>
       </el-main>
 
@@ -41,7 +43,7 @@
           <el-col :span="10">
             <h2>SERVICE</h2>
             <div class="contact">
-              <h3>電子信箱 echoplus2016@gmail.com</h3>
+              <h3>電子信箱 ：echoplus2016@gmail.com</h3>
               <h3>聯絡電話 ：(02)8692-3526 / 0975-010-399</h3>
               <h3>週一至週五 9:00-17:00</h3>
             </div>
@@ -85,6 +87,10 @@
 </script>
 
 <style>
+
+  .el-fade-in-linear-enter-active {
+    transition-delay: 0.2s;
+  }
 
   body {
     margin: 0;

@@ -18,63 +18,67 @@
       </el-col>
     </el-row>
 
-    <el-row type="flex" justify="center">
-      <el-col>
-        <el-row>
-          <el-col :span="3">
-            <div class="decoration">
-              <h3 class="features-title">客製產品</h3>
-            </div>
-          </el-col>
-        </el-row>
-        <el-row class="items" justify="space-between" type="flex" :gutter="20">
-          <el-col :span="6" >
-            <div @click="product('Tshirt')" class="item">
-              <img src="../../src/assets/MainPage/小圖1_test.jpg" class="features-img">
-              <div class="middle">
-                <div class="text">前往商品頁面</div>
-              </div>
-            </div>
-          </el-col>
-          <el-col :span="6">
-            <div @click="product('Hoodie')" class="item">
-              <img src="../../src/assets/MainPage/小圖2_test.jpg" class="features-img">
-              <div class="middle">
-                <div class="text">前往商品頁面</div>
-              </div>
-            </div>
-          </el-col>
-          <el-col :span="6">
-            <div @click="product('Polo')" class="item">
-              <img src="../../src/assets/MainPage/小圖4_test.jpg" class="features-img">
-              <div class="middle">
-                <div class="text">前往商品頁面</div>
-              </div>
-            </div>
-          </el-col>
-          <el-col :span="6">
-            <div @click="product('Bag')" class="item">
-              <img src="../../src/assets/MainPage/小圖5_test.jpg" class="features-img">
-              <div class="middle">
-                <div class="text">前往商品頁面</div>
-              </div>
-            </div>
-          </el-col>
-        </el-row>
-      </el-col>
-    </el-row>
+    <el-row>
 
-    <el-row type="flex" justify="center">
-      <el-col>
-        <el-row>
-          <el-col :span="3">
-            <div class="decoration">
-              <h3 class="features-title">產品特色</h3>
-            </div>
+        <el-row type="flex" justify="center">
+          <el-col>
+            <el-row>
+              <el-col :span="3">
+                <div class="decoration">
+                  <h3 class="features-title">客製產品</h3>
+                </div>
+              </el-col>
+            </el-row>
+            <el-row class="items" justify="space-between" type="flex" :gutter="20">
+              <el-col :span="6" >
+                <div @click="product('Tshirt')" class="item">
+                  <img src="../../src/assets/MainPage/小圖1_test.jpg" class="features-img">
+                  <div class="middle">
+                    <div class="text">前往商品頁面</div>
+                  </div>
+                </div>
+              </el-col>
+              <el-col :span="6">
+                <div @click="product('Hoodie')" class="item">
+                  <img src="../../src/assets/MainPage/小圖2_test.jpg" class="features-img">
+                  <div class="middle">
+                    <div class="text">前往商品頁面</div>
+                  </div>
+                </div>
+              </el-col>
+              <el-col :span="6">
+                <div @click="product('Polo')" class="item">
+                  <img src="../../src/assets/MainPage/小圖4_test.jpg" class="features-img">
+                  <div class="middle">
+                    <div class="text">前往商品頁面</div>
+                  </div>
+                </div>
+              </el-col>
+              <el-col :span="6">
+                <div @click="product('Bag')" class="item">
+                  <img src="../../src/assets/MainPage/小圖5_test.jpg" class="features-img">
+                  <div class="middle">
+                    <div class="text">前往商品頁面</div>
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
           </el-col>
         </el-row>
-        <img src="../../src/assets/MainPage/banner5.jpg" class="features-img">
-      </el-col>
+
+        <el-row type="flex" justify="center">
+          <el-col>
+            <el-row>
+              <el-col :span="3">
+                <div class="decoration">
+                  <h3 class="features-title">產品特色</h3>
+                </div>
+              </el-col>
+            </el-row>
+            <img src="../../src/assets/MainPage/banner5.jpg" class="features-img">
+          </el-col>
+        </el-row>
+
     </el-row>
 
   </div>

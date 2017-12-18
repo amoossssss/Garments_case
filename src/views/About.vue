@@ -5,8 +5,6 @@
         <el-menu
           :default-active="$route.path"
           class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
           :router="true"
           backgroundColor="#f2f2f2"
           text-color="#191919"
@@ -32,7 +30,9 @@
 
       <el-col :offset="2" :span="18">
         <div class="rightcontent">
-         <router-view></router-view>
+          <transition name="el-fade-in-linear">
+            <router-view></router-view>
+          </transition>
         </div>
       </el-col>
 
@@ -46,15 +46,7 @@
   export default {
     components: {
       ElContainer,
-      ElCol},
-    methods: {
-      handleOpen(key, keyPath) {
-        console.log(key, keyPath);
-      },
-      handleClose(key, keyPath) {
-        console.log(key, keyPath);
-      }
-    }
+      ElCol}
   }
 </script>
 
