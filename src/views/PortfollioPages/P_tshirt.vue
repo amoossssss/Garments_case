@@ -2,17 +2,7 @@
   <div>
 
     <el-row :span="24" class="portfolio" justify="space-between" type="flex">
-
-      <el-col :span="7">
-        <el-card :body-style="{ padding: '0px' }">
-          <img src="../../assets/Portfolio/cloth1.jpg" class="product_image">
-          <div style="padding: 14px;" class="work">
-            <span>百樂</span>
-            <span class="year">2017</span>
-          </div>
-        </el-card>
-      </el-col>
-
+      
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
           <img src="../../assets/Portfolio/cloth2.jpg" class="product_image">
@@ -33,10 +23,6 @@
         </el-card>
       </el-col>
 
-    </el-row>
-
-    <el-row :span="24" class="portfolio"  justify="space-between" type="flex">
-
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
           <img src="../../assets/Portfolio/cloth6.jpg" class="product_image">
@@ -45,12 +31,6 @@
             <span class="year">2016</span>
           </div>
         </el-card>
-      </el-col>
-
-      <el-col :span="7" >
-      </el-col>
-
-      <el-col :span="7" >
       </el-col>
 
     </el-row>

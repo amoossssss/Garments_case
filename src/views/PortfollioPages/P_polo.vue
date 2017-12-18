@@ -5,15 +5,22 @@
 
       <el-col :span="7">
         <el-card :body-style="{ padding: '0px' }">
+          <img src="../../assets/Portfolio/cloth1.jpg" class="product_image">
+          <div style="padding: 14px;" class="work">
+            <span>百樂</span>
+            <span class="year">2017</span>
+          </div>
+        </el-card>
+      </el-col>
+
+      <el-col :span="7">
+        <el-card :body-style="{ padding: '0px' }">
           <img src="../../assets/Portfolio/cloth3.jpg" class="product_image">
           <div style="padding: 14px;" class="work">
             <span>Juniper</span>
             <span class="year">2017</span>
           </div>
         </el-card>
-      </el-col>
-
-      <el-col :span="7" >
       </el-col>
 
       <el-col :span="7" >
