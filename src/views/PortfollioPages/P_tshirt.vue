@@ -2,7 +2,7 @@
   <div>
 
     <el-row :span="24" class="portfolio" justify="space-between" type="flex">
-      
+
       <el-col :span="7" >
         <el-card :body-style="{ padding: '0px' }">
           <img src="../../assets/Portfolio/cloth2.jpg" class="product_image">

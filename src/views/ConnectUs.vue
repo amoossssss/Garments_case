@@ -101,6 +101,7 @@
   import ElCol from "element-ui/packages/col/src/col";
   import ElButton from "../../node_modules/element-ui/packages/button/src/button";
 
+
   export default {
     components: {
       ElButton,
@@ -146,25 +147,61 @@
       submitForm(formName) {
         this.$refs[formName].validate((valid) => {
           if (valid) {
-            alert('submit!');
+
+            let reqParam={
+              name: this.ruleForm.name,
+              mail:this.ruleForm.mail,
+              clothType: this.ruleForm.clothType,
+              color: this.ruleForm.color,
+              numbers: this.ruleForm.numbers,
+              desc: this.ruleForm.desc,
+              uploadfile: this.ruleForm.fileList
+            };
+
+            this.$http.post('localhost:3000/uploadfile',
+              {
+                reqParam
+              },
+              { headers: {
+                'Content-type': 'application/json;charset=UTF-8',
+              }
+              }).then((res) => {
+              let data = res.data;
+              this.$message({
+                message: data ,
+                showClose: true,
+                duration: 10000
+              });
+
+            })
+              .catch(function (error) {
+                this.$message("提交失败 請再試一次");
+                console.log(error);
+              });
+
           } else {
             console.log('error submit!!');
             return false;
           }
         });
       },
+
       resetForm(formName) {
         this.$refs[formName].resetFields();
       },
+
       handleRemove(file, fileList) {
         console.log(file, fileList);
       },
+
       handlePreview(file) {
         console.log(file);
       },
+
       handleExceed(files, fileList) {
         this.$message.warning(`限制選擇 1 個文件，您選擇了 ${files.length} 個文件，共選擇了 ${files.length + fileList.length} 個文件`);
       }
+
     }
   }
 </script>
