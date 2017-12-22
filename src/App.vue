@@ -5,7 +5,7 @@
         <div @click="goHome()">
           <img src="./assets/MainPage/logo.png" class="logo">
         </div>
-        <div>
+        <div id="nor-menu">
           <el-menu
             :default-active="$route.path"
             class="demo"
@@ -15,23 +15,42 @@
             background-color=" #fdfdfd  "
             text-color="#565656"
             active-text-color="#f26531">
-              <el-menu-item index="/home">首頁</el-menu-item>
-              <el-submenu index="/about">
-                <template slot="title">關於我們</template>
-                <el-menu-item index="/brandconcept" class="menu_title">品牌理念</el-menu-item>
-                <el-menu-item index="/materials" class="menu_title">布料材質</el-menu-item>
-                <el-menu-item index="/techniques" class="menu_title">印刷技術</el-menu-item>
-                <el-menu-item index="/howtomaintain" class="menu_title">保養方式</el-menu-item>
-              </el-submenu>
-              <el-menu-item index="/products">商品清單</el-menu-item>
-              <el-menu-item index="/portfolio">歷年作品</el-menu-item>
-              <el-menu-item index="/connectus">聯絡我們</el-menu-item>
+            <el-menu-item index="/home">首頁</el-menu-item>
+            <el-submenu index="/about">
+              <template slot="title">關於我們</template>
+              <el-menu-item index="/brandconcept" class="menu_title">品牌理念</el-menu-item>
+              <el-menu-item index="/materials" class="menu_title">布料材質</el-menu-item>
+              <el-menu-item index="/techniques" class="menu_title">印刷技術</el-menu-item>
+              <el-menu-item index="/howtomaintain" class="menu_title">保養方式</el-menu-item>
+            </el-submenu>
+            <el-menu-item index="/products">商品清單</el-menu-item>
+            <el-menu-item index="/portfolio">歷年作品</el-menu-item>
+            <el-menu-item index="/connectus">聯絡我們</el-menu-item>
+
           </el-menu>
         </div>
+
+        <div id="sm-menu" class="sm-menu">
+
+          <el-dropdown trigger="click" @command="handleCommand">
+            <span class="el-dropdown-link">
+              <el-button type="info"><i class="el-icon-menu"></i></el-button>
+            </span>
+            <el-dropdown-menu slot="dropdown">
+              <el-dropdown-item command="home">首頁</el-dropdown-item>
+              <el-dropdown-item command="about">關於我們</el-dropdown-item>
+              <el-dropdown-item command="products">商品清單</el-dropdown-item>
+              <el-dropdown-item command="portfolio">歷年作品</el-dropdown-item>
+              <el-dropdown-item command="connectus">聯絡我們</el-dropdown-item>
+            </el-dropdown-menu>
+          </el-dropdown>
+
+        </div>
+
       </el-header>
 
       <el-main>
-        <div  class="main-right" >
+        <div class="main-right">
           <transition name="el-fade-in-linear">
             <router-view class="view"></router-view>
           </transition>
@@ -68,18 +87,27 @@
   import ElCol from "element-ui/packages/col/src/col";
   import ElButton from "../node_modules/element-ui/packages/button/src/button";
   export default {
+    data(){
+      return {
+        isCollapse: true
+      }
+    },
     components: {
       ElButton,
       ElCol,
       ElContainer,
-      ElFooter},
+      ElFooter
+    },
     name: 'app',
     methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
       },
       goHome() {
-          this.$router.push({name:'主頁'}) ;
+        this.$router.push({name: '主頁'});
+      },
+      handleCommand(command) {
+        this.$router.push('/'+command);
       }
     }
   }
@@ -98,24 +126,49 @@
 
   #app {
     background-color: #e6e6e6;
-    font-family: Helvetica,  "Hiragino Sans GB", sans-serif;
+    font-family: Helvetica, "Hiragino Sans GB", sans-serif;
   }
 
   #container {
     margin: 0 auto;
     max-width: 1600px;
-    min-width: 1200px;
-    background-color: rgba(149,149,149,0.86);
+    min-width: 480px;
+    background-color: rgba(149, 149, 149, 0.86);
   }
 
   /* 導覽目錄 */
-  header{z-index: 1000; transition: all 0.5s ease;  background-color: #fdfdfd;}
+  header {
+    z-index: 1000;
+    transition: all 0.5s ease;
+    background-color: #fdfdfd;
+  }
+
   /*header.header-fixed{position: fixed;top: 0;left: 0;right: 0;}*/
-  header .demo{float: right; margin-right: 42px;height: 100%; margin-top: 20px;}
+  header .demo {
+    float: right;
+    margin-right: 42px;
+    height: 100%;
+    margin-top: 20px;
+  }
 
   /* 主内容區 */
-  main{ display: -webkit-box;  display: -ms-flexbox;  display: flex;  min-height: 950px;  border: solid 40px #d9d9d9; background-color: #d9d9d9;  }
-  main .main-right{-webkit-box-flex: 1;  -ms-flex: 1;  flex: 1;  background-color: #fff; padding: 50px 70px; border-radius: 5px;}
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-height: 950px;
+    border: solid 40px #d9d9d9;
+    background-color: #d9d9d9;
+  }
+
+  main .main-right {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #fff;
+    padding: 50px 70px;
+    border-radius: 5px;
+  }
 
   .el-submenu__title {
     font-size: 20px;
@@ -125,7 +178,7 @@
     color: #565656;
   }
 
-  .el-footer{
+  .el-footer {
     background-color: #898989;
     /*#545c64*/
     color: #ffffff;
@@ -143,7 +196,7 @@
   }
 
   .contact {
-    margin-top: 20px ;
+    margin-top: 20px;
     font-size: small;
     margin-bottom: 20px;
     margin-left: 20px;
@@ -156,6 +209,59 @@
 
   .el-menu-item {
     font-size: 20px;
+  }
+
+  .sm-menu {
+    text-align: right;
+    margin-right: 40px;
+    margin-top: 20px;
+  }
+
+  .el-dropdown-menu__item {
+    font-size: 20px;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #nor-menu {
+    display: none;
+  }
+
+  @media screen and (max-device-width: 480px) and (orientation: portrait){
+    #nor-menu {
+      display: none;
+    }
+    #sm-menu {
+      display: block;
+    }
+  }
+
+  @media screen and (max-device-width: 640px) and (orientation: landscape){
+    #nor-menu {
+      display: none;
+    }
+    #sm-menu {
+      display: block;
+    }
+  }
+
+  @media screen and (min-device-width: 640px) and (max-device-width: 1024px){
+    #nor-menu {
+      display: none;
+    }
+    #sm-menu {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    #nor-menu {
+      display: block;
+    }
+    #sm-menu {
+      display: none;
+    }
   }
 
 </style>
