@@ -12,7 +12,7 @@
             mode="horizontal"
             @select="handleSelect"
             :router="true"
-            background-color=" #fdfdfd  "
+            background-color="#fdfdfd"
             text-color="#565656"
             active-text-color="#f26531">
             <el-menu-item index="/home">首頁</el-menu-item>
@@ -32,7 +32,7 @@
 
         <div id="sm-menu" class="sm-menu">
 
-          <el-dropdown trigger="click" @command="handleCommand">
+          <el-dropdown  trigger="click" @command="handleCommand">
             <span class="el-dropdown-link">
               <el-button type="info"><i class="el-icon-menu"></i></el-button>
             </span>
@@ -217,11 +217,16 @@
     margin-top: 20px;
   }
 
+  /*TODO menu hover color*/
   .el-dropdown-menu__item {
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: 200;
+    letter-spacing: 3px;
     text-align: center;
     padding-left: 30px;
     padding-right: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   #nor-menu {

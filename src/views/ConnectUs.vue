@@ -56,11 +56,11 @@
                   <el-option label="深灰" value="18"></el-option>
                   <el-option label="黑色" value="12"></el-option>
                 </el-select>
+                <!--<el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>-->
+              </el-form-item>
+              <el-form-item>
                 <el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>
               </el-form-item>
-              <!--<el-form-item>-->
-              <!--<el-button type="info" @click="dialogVisible = true">查看色碼錶</el-button>-->
-              <!--</el-form-item>-->
               <el-form-item label="件數" prop="numbers">
                 <el-input v-model="ruleForm.numbers"></el-input>
               </el-form-item>
@@ -143,11 +143,11 @@
                   <el-option label="深灰" value="18"></el-option>
                   <el-option label="黑色" value="12"></el-option>
                 </el-select>
+                <!--<el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>-->
+              </el-form-item>
+              <el-form-item>
                 <el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>
               </el-form-item>
-              <!--<el-form-item>-->
-              <!--<el-button type="info" @click="dialogVisible = true">查看色碼錶</el-button>-->
-              <!--</el-form-item>-->
               <el-form-item label="件數" prop="numbers">
                 <el-input v-model="ruleForm.numbers"></el-input>
               </el-form-item>
@@ -345,7 +345,7 @@
   }
 
   .colorButton {
-    margin-left: 20px;
+    /*margin-left: 20px;*/
   }
 
   #sm {

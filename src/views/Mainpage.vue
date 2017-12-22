@@ -23,7 +23,7 @@
         <el-row type="flex" justify="center">
           <el-col>
             <el-row>
-              <el-col :span="4">
+              <el-col :span="5">
                 <div class="decoration">
                   <h3 class="features-title">客製產品</h3>
                 </div>
@@ -69,7 +69,7 @@
         <el-row type="flex" justify="center">
           <el-col>
             <el-row>
-              <el-col :span="4">
+              <el-col :span="5">
                 <div class="decoration">
                   <h3 class="features-title">產品特色</h3>
                 </div>
