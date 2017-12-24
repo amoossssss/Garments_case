@@ -98,13 +98,13 @@
 
     <div id="xs">
       <el-row justify="space-around" type="flex">
-        <el-col :span="23">
+        <el-col :span="24">
           <img src="../../src/assets/Product/商品清單.jpg" class="title_image">
         </el-col>
       </el-row>
-      <el-row :span="24" class="products" justify="space-around" type="flex">
+      <el-row :span="24" class="products" justify="space-around" type="flex" :gutter="10">
 
-        <el-col :span="11" >
+        <el-col :span="12" >
           <el-card :body-style="{ padding: '0px' }">
             <div @click="goDetails('tshirt')">
               <img src="../assets/Product/T恤小圖.jpg" class="box_image">
@@ -118,7 +118,7 @@
           </el-card>
         </el-col>
 
-        <el-col :span="11" >
+        <el-col :span="12" >
           <el-card :body-style="{ padding: '0px' }">
             <div @click="goDetails('polo')">
               <img src="../assets/Product/polo小圖.jpg" class="box_image">
@@ -133,9 +133,9 @@
         </el-col>
       </el-row>
 
-      <el-row :span="24" class="products" justify="space-around" type="flex">
+      <el-row :span="24" class="products" justify="space-around" type="flex" :gutter="10">
 
-        <el-col :span="11" >
+        <el-col :span="12" >
           <el-card :body-style="{ padding: '0px' }">
             <div @click="goDetails('hoodie')">
               <img src="../assets/Product/帽T小圖.jpg" class="box_image">
@@ -149,7 +149,7 @@
           </el-card>
         </el-col>
 
-        <el-col :span="11" >
+        <el-col :span="12" >
           <el-card :body-style="{ padding: '0px' }">
             <div @click="goDetails('bag')">
               <img src="../assets/Product/帆布袋.jpg" class="box_image">
@@ -164,8 +164,8 @@
         </el-col>
       </el-row>
 
-      <el-row :span="24" class="products" justify="space-around" type="flex">
-        <el-col :span="11" >
+      <el-row :span="24" class="products" justify="space-around" type="flex" :gutter="10">
+        <el-col :span="12" >
           <el-card :body-style="{ padding: '0px' }">
             <div @click="goDetails('hat')">
               <img src="../assets/Product/帽小.jpg" class="box_image">
@@ -179,7 +179,7 @@
           </el-card>
         </el-col>
 
-        <el-col :span="11" >
+        <el-col :span="12" >
           <el-card :body-style="{ padding: '0px' }">
             <div @click="goOther()">
               <img src="../../src/assets/Product/其他商品.jpg" class="box_image" id="other">
@@ -299,6 +299,9 @@
     }
     #xs {
       display: block;
+    }
+    .title_image {
+      margin-bottom: 0;
     }
   }
 

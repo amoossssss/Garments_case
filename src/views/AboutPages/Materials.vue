@@ -1,60 +1,59 @@
-<!--TODO font size issue & view small img issue-->
 <template>
-  <div>
+  <div class="materials">
     <h2 class="titleM">布料材質</h2>
     <hr class="lineM">
 
     <div class="desc_block">
-      <el-row :span="24" >
-          <img src="../../assets/Materials/布料1.jpg" class="main_img" alt="純棉1">
+      <el-row :span="24">
+        <img src="../../assets/Materials/布料1.jpg" class="main_img" alt="純棉1">
       </el-row>
     </div>
     <div class="little_block">
       <el-row :span="24" justify="space-between" type="flex">
-          <el-col :span="15">
+        <el-col :span="15">
           <div class="little_img">
-              <vue-images :imgs="imagesSet1"
-                          :modalclose="modalclose"
-                          :keyinput="keyinput"
-                          :mousescroll="mousescroll"
-                          :showclosebutton="showclosebutton"
-                          :showcaption="showcaption"
-                          :imagecountseparator="imagecountseparator"
-                          :showimagecount="showimagecount"
-                          :showthumbnails="showthumbnails">
-              </vue-images>
+            <vue-images :imgs="imagesSet1"
+                        :modalclose="modalclose"
+                        :keyinput="keyinput"
+                        :mousescroll="mousescroll"
+                        :showclosebutton="showclosebutton"
+                        :showcaption="showcaption"
+                        :imagecountseparator="imagecountseparator"
+                        :showimagecount="showimagecount"
+                        :showthumbnails="showthumbnails">
+            </vue-images>
           </div>
         </el-col>
       </el-row>
     </div>
 
     <div class="desc_block">
-      <el-row :span="24" >
-          <img src="../../assets/Materials/布料2.jpg" class="main_img" alt="吸濕1">
+      <el-row :span="24">
+        <img src="../../assets/Materials/布料2.jpg" class="main_img" alt="吸濕1">
       </el-row>
     </div>
     <div class="little_block">
       <el-row :span="24" justify="space-between" type="flex">
-          <el-col :span="15">
-            <div class="little_img">
-              <vue-images :imgs="imagesSet2"
-                          :modalclose="modalclose"
-                          :keyinput="keyinput"
-                          :mousescroll="mousescroll"
-                          :showclosebutton="showclosebutton"
-                          :showcaption="showcaption"
-                          :imagecountseparator="imagecountseparator"
-                          :showimagecount="showimagecount"
-                          :showthumbnails="showthumbnails">
-              </vue-images>
-            </div>
-          </el-col>
+        <el-col :span="15">
+          <div class="little_img">
+            <vue-images :imgs="imagesSet2"
+                        :modalclose="modalclose"
+                        :keyinput="keyinput"
+                        :mousescroll="mousescroll"
+                        :showclosebutton="showclosebutton"
+                        :showcaption="showcaption"
+                        :imagecountseparator="imagecountseparator"
+                        :showimagecount="showimagecount"
+                        :showthumbnails="showthumbnails">
+            </vue-images>
+          </div>
+        </el-col>
       </el-row>
     </div>
 
     <div class="desc_block">
-      <el-row :span="24" >
-          <img src="../../assets/Materials/布料3.jpg" class="main_img" alt="polo1">
+      <el-row :span="24">
+        <img src="../../assets/Materials/布料3.jpg" class="main_img" alt="polo1">
       </el-row>
     </div>
     <div class="little_block">
@@ -87,35 +86,20 @@
     data(){
       return {
         imagesSet1: [
-          { imageUrl: require('../../assets/Materials/純棉2.jpg') },
-          { imageUrl: require('../../assets/Materials/純棉3.jpg') },
-          { imageUrl: require('../../assets/Materials/純棉4.jpg') }
+          {imageUrl: require('../../assets/Materials/純棉2.jpg')},
+          {imageUrl: require('../../assets/Materials/純棉3.jpg')},
+          {imageUrl: require('../../assets/Materials/純棉4.jpg')}
         ],
         imagesSet2: [
-          { imageUrl: require('../../assets/Materials/吸濕2.jpg') },
-          { imageUrl: require('../../assets/Materials/吸濕3.jpg') },
-          { imageUrl: require('../../assets/Materials/吸濕4.jpg') }
+          {imageUrl: require('../../assets/Materials/吸濕2.jpg')},
+          {imageUrl: require('../../assets/Materials/吸濕3.jpg')},
+          {imageUrl: require('../../assets/Materials/吸濕4.jpg')}
         ],
         imagesSet3: [
-          { imageUrl: require('../../assets/Materials/polo2.jpg') },
-          { imageUrl: require('../../assets/Materials/polo3.jpg') },
-          { imageUrl: require('../../assets/Materials/polo4.jpg') }
+          {imageUrl: require('../../assets/Materials/polo2.jpg')},
+          {imageUrl: require('../../assets/Materials/polo3.jpg')},
+          {imageUrl: require('../../assets/Materials/polo4.jpg')}
         ],
-//        imagesSet1: [
-//          { imageUrl: require('../../assets/Materials/1.jpg') },
-//          { imageUrl: require('../../assets/Materials/2.jpg') },
-//          { imageUrl: require('../../assets/Materials/3.jpg') }
-//        ],
-//        imagesSet2: [
-//          { imageUrl: require('../../assets/Materials/4.jpg') },
-//          { imageUrl: require('../../assets/Materials/5.jpg') },
-//          { imageUrl: require('../../assets/Materials/6.jpg') }
-//        ],
-//        imagesSet3: [
-//          { imageUrl: require('../../assets/Materials/7.jpg') },
-//          { imageUrl: require('../../assets/Materials/8.jpg') },
-//          { imageUrl: require('../../assets/Materials/9.jpg') }
-//        ],
         modalclose: true,
         keyinput: true,
         mousescroll: true,
@@ -126,7 +110,7 @@
         showthumbnails: true
       }
     },
-    components : {
+    components: {
       ElCol,
       vueImages: vueImages
     }
@@ -134,6 +118,9 @@
 </script>
 
 <style>
+  .materials {
+    width: 100%;
+  }
 
   .titleM {
     padding-top: 20px;
@@ -169,6 +156,30 @@
   .little_block {
     margin-top: 15px;
     margin-left: 20px;
+  }
+
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .titleM {
+      font-size: 32px;
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .titleM {
+      font-size: 32px;
+      padding-top: 0;
+    }
+  }
+
+  @media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
+    .titleM {
+      font-size: 32px;
+      padding-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
   }
 
 </style>

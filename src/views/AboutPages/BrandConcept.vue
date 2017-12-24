@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="concept">
     <h2 class="titleB">品牌理念</h2>
     <hr class="lineB">
     <div class="contentB">
@@ -26,6 +26,10 @@
 </template>
 
 <style>
+  .concept {
+    width: 100%;
+  }
+
   .titleB {
     padding-top: 20px;
     padding-left: 20px;
@@ -47,5 +51,42 @@
 
   .oneB {
     padding-top: 20px;
+  }
+
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
+    .titleB {
+      font-size: 24px;
+      padding-top: 0;
+    }
+
+    .contentB {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (max-device-width: 640px) and (orientation: landscape) {
+    .titleB {
+      font-size: 28px;
+      padding-top: 0;
+    }
+
+    .contentB {
+      font-size: 20px;
+    }
+  }
+
+  @media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
+    .titleB {
+      font-size: 28px;
+      padding-top: 20px;
+    }
+
+    .contentB {
+      font-size: 24px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+
   }
 </style>

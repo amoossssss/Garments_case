@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-row :span="24" class="tac" :gutter="20">
+    <el-row :span="24" class="tac" >
       <div id="sm">
         <el-col :span="5" class="sidemenu">
           <el-menu
@@ -29,7 +29,7 @@
           </el-menu>
         </el-col>
 
-        <el-col :span="19">
+        <el-col :offset="1" :span="18">
           <div class="rightcontent">
             <transition name="el-fade-in-linear">
               <router-view></router-view>
@@ -51,19 +51,19 @@
                   backgroundColor="#ffffff"
                   text-color="#191919"
                   active-text-color="#f26531">
-                  <el-menu-item index="/brandconcept" class="item">
+                  <el-menu-item index="/brandconcept" class="item1">
                     <i class="el-icon-menu"></i>
                     <span slot="title">品牌理念</span>
                   </el-menu-item>
-                  <el-menu-item index="/materials" class="item">
+                  <el-menu-item index="/materials" class="item1">
                     <i class="el-icon-star-on"></i>
                     <span slot="title">布料材質</span>
                   </el-menu-item>
-                  <el-menu-item index="/techniques" class="item">
+                  <el-menu-item index="/techniques" class="item1">
                     <i class="el-icon-printer"></i>
                     <span slot="title">印刷技術</span>
                   </el-menu-item>
-                  <el-menu-item index="/howtomaintain" class="item">
+                  <el-menu-item index="/howtomaintain" class="item1">
                     <i class="el-icon-question"></i>
                     <span slot="title">保養方式</span>
                   </el-menu-item>
@@ -99,8 +99,9 @@
 
 <style>
 
+
   .tac {
-    min-width: 100%;
+    width: 100%;
   }
 
   .rightcontent {
@@ -120,8 +121,16 @@
     margin-bottom: 20px;
   }
 
-  .el-menu--horizontal {
+  .el-menu {
     border: none;
+  }
+
+  .el-menu-item {
+    text-align: center;
+  }
+
+  .item1 {
+    font-size: 24px;
   }
 
   @media screen and (max-device-width: 480px) and (orientation: portrait) {

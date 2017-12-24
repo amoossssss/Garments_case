@@ -32,7 +32,7 @@
 
         <div id="sm-menu" class="sm-menu">
 
-          <el-dropdown  trigger="click" @command="handleCommand">
+          <el-dropdown trigger="click" @command="handleCommand">
             <span class="el-dropdown-link">
               <el-button type="info"><i class="el-icon-menu"></i></el-button>
             </span>
@@ -59,7 +59,7 @@
 
       <el-footer height="auto">
         <el-row>
-          <el-col :span="10">
+          <el-col :sm="10" :xs="24">
             <h2>SERVICE</h2>
             <div class="contact">
               <h3>電子信箱 ：echoplus2016@gmail.com</h3>
@@ -68,7 +68,7 @@
             </div>
             <h6>©echoplus. All Rights reserved</h6>
           </el-col>
-          <el-col :span="4" :offset="8">
+          <el-col :sm={span:4,offset:8} :xs={span:8,offset:0}>
             <a target="_blank" href="https://facebook.com/echoplus2016/">
               <img src="./assets/MainPage/FB.png" class="FB">
             </a>
@@ -107,7 +107,7 @@
         this.$router.push({name: '主頁'});
       },
       handleCommand(command) {
-        this.$router.push('/'+command);
+        this.$router.push('/' + command);
       }
     }
   }
@@ -166,8 +166,9 @@
     -ms-flex: 1;
     flex: 1;
     background-color: #fff;
-    padding: 50px 70px;
+    padding: 50px 50px;
     border-radius: 5px;
+
   }
 
   .el-submenu__title {
@@ -211,18 +212,22 @@
     font-size: 20px;
   }
 
+  .el-dropdown-menu {
+    width: 150px;
+  }
+
   .sm-menu {
     text-align: right;
-    margin-right: 40px;
+    margin-right: 8px;
     margin-top: 20px;
   }
 
   /*TODO menu hover color*/
   .el-dropdown-menu__item {
-    font-size: 30px;
-    font-weight: 200;
+    width: auto;
+    font-size: 19px;
+    font-weight: 300;
     letter-spacing: 3px;
-    text-align: center;
     padding-left: 30px;
     padding-right: 30px;
     margin-top: 20px;
@@ -233,37 +238,92 @@
     display: none;
   }
 
-  @media screen and (max-device-width: 480px) and (orientation: portrait){
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
     #nor-menu {
       display: none;
     }
+
     #sm-menu {
       display: block;
     }
+
+    main {
+      border: solid 5px #d9d9d9;
+    }
+
+    main .main-right {
+      padding: 20px 20px;
+      border-radius: 5px;
+    }
+
+    .logo {
+      margin-left: 20px;
+    }
+
+    .FB {
+      margin-top: 0%;
+    }
+
+    .contact {
+      margin-bottom: 0%;
+    }
   }
 
-  @media screen and (max-device-width: 640px) and (orientation: landscape){
+  @media screen and (max-device-width: 640px) and (orientation: landscape) {
     #nor-menu {
       display: none;
     }
+
     #sm-menu {
       display: block;
     }
+
+    main {
+      border: solid 5px #d9d9d9;
+    }
+
+    main .main-right {
+      padding: 20px 20px;
+      border-radius: 5px;
+    }
+
+    .logo {
+      margin-left: 20px;
+    }
+
+    .FB {
+      margin-top: 0%;
+    }
   }
 
-  @media screen and (min-device-width: 640px) and (max-device-width: 1024px){
+  @media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
     #nor-menu {
       display: none;
     }
+
     #sm-menu {
       display: block;
     }
+
+    main {
+      border: solid 5px #d9d9d9;
+    }
+
+    main .main-right {
+      padding: 20px 20px;
+      border-radius: 5px
+    }
+
+    .logo {
+      margin-left: 20px;
+    }
   }
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px) {
     #nor-menu {
       display: block;
     }
+
     #sm-menu {
       display: none;
     }
