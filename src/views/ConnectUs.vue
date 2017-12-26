@@ -191,6 +191,7 @@
   import ElCol from "element-ui/packages/col/src/col";
   import ElButton from "../../node_modules/element-ui/packages/button/src/button";
 
+//  Vue.http.options.xhr = {withCredentials: true};
 
   export default {
     components: {
@@ -245,17 +246,25 @@
               clothType: this.ruleForm.clothType,
               color: this.ruleForm.color,
               numbers: this.ruleForm.numbers,
-              desc: this.ruleForm.desc,
-              uploadfile: this.ruleForm.fileList
+              desc: this.ruleForm.desc
+//              uploadfile: this.ruleForm.fileList
             };
 
-            this.$http.post('localhost:3000/uploadfile',
+            console.log(reqParam);
+
+//            this.$http.options.xhr = {withCredentials: true};
+//            this.$http.options.emulateJSON = true;
+//            this.$http.options.credentials = true;
+
+            this.$http.post('http://localhost:3000/uploadfile',
               {
                 reqParam
               },
               {
                 headers: {
                   'Content-type': 'application/json;charset=UTF-8',
+//                  'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8',
+//                  'Access-Control-Allow-Origin' : '*',
                 }
               }).then((res) => {
               let data = res.data;
