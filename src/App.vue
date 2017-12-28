@@ -248,7 +248,7 @@
     }
 
     main {
-      border: solid 5px #d9d9d9;
+      border: solid 0px #d9d9d9;
     }
 
     main .main-right {
@@ -279,7 +279,7 @@
     }
 
     main {
-      border: solid 5px #d9d9d9;
+      border: solid 0px #d9d9d9;
     }
 
     main .main-right {
@@ -306,7 +306,7 @@
     }
 
     main {
-      border: solid 5px #d9d9d9;
+      border: solid 0px #d9d9d9;
     }
 
     main .main-right {

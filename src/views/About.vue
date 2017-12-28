@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-row :span="24" class="tac" >
+    <el-row :span="24" class="tac">
       <div id="sm">
         <el-col :span="5" class="sidemenu">
           <el-menu
@@ -41,7 +41,28 @@
       <div id="xs">
         <el-col :span="24">
           <div class="rightcontent">
-            <el-row type="flex" justify="space-around" class="mobile">
+            <el-row class="mobile">
+                <div>
+                  <el-menu
+                    :default-active="$route.path"
+                    class="mobile"
+                    mode="horizontal"
+                    :router="true"
+                    backgroundColor="#ffffff"
+                    text-color="#191919"
+                    active-text-color="#f26531">
+                    <el-menu-item index="/brandconcept" class="item1">
+                      <i class="el-icon-menu"></i>
+                      <span slot="title">品牌理念</span>
+                    </el-menu-item>
+                    <el-menu-item index="/materials" class="item1">
+                      <i class="el-icon-star-on"></i>
+                      <span slot="title">布料材質</span>
+                    </el-menu-item>
+                  </el-menu>
+                </div>
+            </el-row>
+            <el-row class="mobile">
               <div>
                 <el-menu
                   :default-active="$route.path"
@@ -51,14 +72,6 @@
                   backgroundColor="#ffffff"
                   text-color="#191919"
                   active-text-color="#f26531">
-                  <el-menu-item index="/brandconcept" class="item1">
-                    <i class="el-icon-menu"></i>
-                    <span slot="title">品牌理念</span>
-                  </el-menu-item>
-                  <el-menu-item index="/materials" class="item1">
-                    <i class="el-icon-star-on"></i>
-                    <span slot="title">布料材質</span>
-                  </el-menu-item>
                   <el-menu-item index="/techniques" class="item1">
                     <i class="el-icon-printer"></i>
                     <span slot="title">印刷技術</span>
@@ -118,11 +131,12 @@
 
   .mobile {
     background-color: white;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
   }
 
   .el-menu {
     border: none;
+    margin-left: 15%;
   }
 
   .el-menu-item {
@@ -130,7 +144,7 @@
   }
 
   .item1 {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   @media screen and (max-device-width: 480px) and (orientation: portrait) {

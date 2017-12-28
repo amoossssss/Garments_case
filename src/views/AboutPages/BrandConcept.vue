@@ -55,7 +55,7 @@
 
   @media screen and (max-device-width: 480px) and (orientation: portrait) {
     .titleB {
-      font-size: 24px;
+      font-size: 32px;
       padding-top: 0;
     }
 
@@ -66,7 +66,7 @@
 
   @media screen and (max-device-width: 640px) and (orientation: landscape) {
     .titleB {
-      font-size: 28px;
+      font-size: 32px;
       padding-top: 0;
     }
 
@@ -77,7 +77,7 @@
 
   @media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
     .titleB {
-      font-size: 28px;
+      font-size: 32px;
       padding-top: 20px;
     }
 

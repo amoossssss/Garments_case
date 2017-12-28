@@ -301,7 +301,7 @@
       display: block;
     }
     .title_image {
-      margin-bottom: 0;
+      margin-bottom: 20px;
     }
   }
 
@@ -311,6 +311,9 @@
     }
     #xs {
       display: block;
+    }
+    .title_image {
+      margin-bottom: 20px;
     }
   }
 
