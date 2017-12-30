@@ -14,6 +14,7 @@
     "element-ui": "^2.0.1",
     "lightbox2": "^2.10.0",
     "vue": "^2.5.2",
+    "vue-carousel": "^0.6.5",
     "vue-fancybox": "^1.0.3",
     "vue-images": "^1.1.0",
     "vue-router": "^3.0.1",

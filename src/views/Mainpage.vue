@@ -1,25 +1,30 @@
 <template class="main">
   <div>
+
     <el-row>
       <el-col>
         <div class="block">
-        <el-carousel indicator-position="outside" height="600px">
-          <el-carousel-item  :key="1">
-            <img src="../assets/MainPage/banner1.jpg" class="carousel-img">
-          </el-carousel-item>
-          <el-carousel-item  :key="2">
-            <div @click="product('Tshirt')" class="bannerClick"><img src="../assets/MainPage/banner2.jpg" class="carousel-img"></div>
-          </el-carousel-item>
-          <el-carousel-item  :key="3">
-            <div @click="goMaterial()" class="bannerClick"><img src="../assets/MainPage/banner3.jpg" class="carousel-img"></div>
-          </el-carousel-item>
-        </el-carousel>
+          <carousel :perPage="1" :autoplay="true" :autoplayHoverPause="true" :autoplayTimeout="3500"
+                    paginationActiveColor="#f26531" :loop="true">
+            <slide>
+              <img src="../assets/MainPage/banner1.jpg" class="carousel-img">
+            </slide>
+            <slide>
+              <div @click="product('Tshirt')" class="bannerClick"><img src="../assets/MainPage/banner2.jpg"
+                                                                       class="carousel-img"></div>
+            </slide>
+            <slide>
+              <div @click="goMaterial()" class="bannerClick"><img src="../assets/MainPage/banner3.jpg"
+                                                                  class="carousel-img"></div>
+            </slide>
+          </carousel>
         </div>
       </el-col>
     </el-row>
 
     <el-row>
 
+      <div id="sm">
         <el-row type="flex" justify="center">
           <el-col>
             <el-row>
@@ -30,7 +35,7 @@
               </el-col>
             </el-row>
             <el-row class="items" justify="space-between" type="flex" :gutter="20">
-              <el-col :sm="6" :xs="12" >
+              <el-col :sm="6">
                 <div @click="product('Tshirt')" class="item">
                   <img src="../../src/assets/MainPage/小圖1_test.jpg" class="features-img">
                   <div class="middle">
@@ -38,7 +43,7 @@
                   </div>
                 </div>
               </el-col>
-              <el-col :sm="6" :xs="12">
+              <el-col :sm="6">
                 <div @click="product('Hoodie')" class="item">
                   <img src="../../src/assets/MainPage/小圖2_test.jpg" class="features-img">
                   <div class="middle">
@@ -46,7 +51,7 @@
                   </div>
                 </div>
               </el-col>
-              <el-col :sm="6" :xs="12">
+              <el-col :sm="6">
                 <div @click="product('Polo')" class="item">
                   <img src="../../src/assets/MainPage/小圖4_test.jpg" class="features-img">
                   <div class="middle">
@@ -54,7 +59,7 @@
                   </div>
                 </div>
               </el-col>
-              <el-col :sm="6" :xs="12">
+              <el-col :sm="6">
                 <div @click="product('Bag')" class="item">
                   <img src="../../src/assets/MainPage/小圖5_test.jpg" class="features-img">
                   <div class="middle">
@@ -78,6 +83,70 @@
             <img src="../../src/assets/MainPage/banner5.jpg" class="features-img">
           </el-col>
         </el-row>
+      </div>
+
+      <div id="xs">
+        <el-row type="flex" justify="center">
+          <el-col>
+            <el-row type="flex" justify="center">
+              <el-col :span="10">
+                <div class="decoration">
+                  <h3 class="features-title">客製產品</h3>
+                </div>
+              </el-col>
+            </el-row>
+            <el-row class="items" justify="space-between" type="flex" :gutter="20">
+              <el-col :span="12">
+                <div @click="product('Tshirt')" class="item">
+                  <img src="../../src/assets/MainPage/小圖1_test.jpg" class="features-img">
+                  <div class="middle">
+                    <div class="text">前往商品頁面</div>
+                  </div>
+                </div>
+              </el-col>
+              <el-col :span="12">
+                <div @click="product('Hoodie')" class="item">
+                  <img src="../../src/assets/MainPage/小圖2_test.jpg" class="features-img">
+                  <div class="middle">
+                    <div class="text">前往商品頁面</div>
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+            <el-row class="items" justify="space-between" type="flex" :gutter="20">
+              <el-col :span="12">
+                <div @click="product('Polo')" class="item">
+                  <img src="../../src/assets/MainPage/小圖4_test.jpg" class="features-img">
+                  <div class="middle">
+                    <div class="text">前往商品頁面</div>
+                  </div>
+                </div>
+              </el-col>
+              <el-col :span="12">
+                <div @click="product('Bag')" class="item">
+                  <img src="../../src/assets/MainPage/小圖5_test.jpg" class="features-img">
+                  <div class="middle">
+                    <div class="text">前往商品頁面</div>
+                  </div>
+                </div>
+              </el-col>
+            </el-row>
+          </el-col>
+        </el-row>
+
+        <el-row type="flex" justify="center">
+          <el-col>
+            <el-row type="flex" justify="center">
+              <el-col :span="10">
+                <div class="decoration">
+                  <h3 class="features-title">產品特色</h3>
+                </div>
+              </el-col>
+            </el-row>
+            <img src="../../src/assets/MainPage/banner5.jpg" class="features-img">
+          </el-col>
+        </el-row>
+      </div>
 
     </el-row>
 
@@ -93,26 +162,27 @@
     components: {
       ElButton,
       ElCol,
-      ElRow
+      ElRow,
+
     },
     methods: {
-        product(name){
-            if(name=='Tshirt'){
-              this.$router.push({name:'T恤'}) ;
-            }
-            if(name=='Hoodie'){
-              this.$router.push({name:'帽T'}) ;
-            }
-            if(name=='Polo'){
-              this.$router.push({name:'Polo衫'}) ;
-            }
-            if(name=='Bag'){
-              this.$router.push({name:'帆布袋'}) ;
-            }
-        },
-        goMaterial(){
-            this.$router.push({name:'布料材質'}) ;
+      product(name){
+        if (name == 'Tshirt') {
+          this.$router.push({name: 'T恤'});
         }
+        if (name == 'Hoodie') {
+          this.$router.push({name: '帽T'});
+        }
+        if (name == 'Polo') {
+          this.$router.push({name: 'Polo衫'});
+        }
+        if (name == 'Bag') {
+          this.$router.push({name: '帆布袋'});
+        }
+      },
+      goMaterial(){
+        this.$router.push({name: '布料材質'});
+      }
 
     },
   }
@@ -188,4 +258,81 @@
   .bannerClick {
     cursor: pointer;
   }
+
+  #sm {
+    display: none;
+  }
+
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
+    #sm {
+      display: none;
+    }
+
+    #xs {
+      display: block;
+    }
+
+    .features-title {
+      font-size: 20px;
+    }
+
+    .decoration {
+      margin-top: 20px;
+    }
+
+    .items {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (max-device-width: 640px) and (orientation: landscape) {
+    #sm {
+      display: none;
+    }
+
+    #xs {
+      display: block;
+    }
+
+    .features-title {
+      font-size: 20px;
+    }
+
+    .decoration {
+      margin-top: 20px;
+    }
+
+    .items {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
+    #sm {
+      display: none;
+    }
+
+    #xs {
+      display: block;
+    }
+
+    .features-title {
+      font-size: 20px;
+    }
+
+    .decoration {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #sm {
+      display: block;
+    }
+
+    #xs {
+      display: none;
+    }
+  }
+
 </style>

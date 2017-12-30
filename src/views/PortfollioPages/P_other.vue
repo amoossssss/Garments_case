@@ -74,4 +74,44 @@
     font-size: small;
   }
 
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
+    #sm {
+      display: none;
+    }
+
+    #xs {
+      display: block;
+    }
+  }
+
+  @media screen and (max-device-width: 640px) and (orientation: landscape) {
+    #sm {
+      display: none;
+    }
+
+    #xs {
+      display: block;
+    }
+  }
+
+  @media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
+    #sm {
+      display: none;
+    }
+
+    #xs {
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #sm {
+      display: block;
+    }
+
+    #xs {
+      display: none;
+    }
+  }
+
 </style>

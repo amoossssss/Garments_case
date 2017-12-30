@@ -163,6 +163,11 @@
       font-size: 32px;
       padding-top: 0;
     }
+    .gallery .wrapper img[data-v-6173992d] {
+      width: 100%;
+      height: 100%;
+
+    }
   }
 
   @media screen and (max-device-width: 640px) and (orientation: landscape) {

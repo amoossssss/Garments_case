@@ -66,36 +66,22 @@
       </div>
 
       <div id="xs">
-        <!--<el-col :span="4">-->
-          <!--<el-menu-->
-            <!--:default-active="$route.path"-->
-            <!--class="el-menu-vertical-demo"-->
-            <!--:router="true"-->
-            <!--backgroundColor="#f2f2f2"-->
-            <!--text-color="#191919"-->
-            <!--active-text-color="#f26531">-->
-            <!--<el-menu-item index="/tshirt">-->
-              <!--<i class="el-icon-arrow-right"></i>-->
-              <!--<span slot="title">T-shirt</span>-->
-            <!--</el-menu-item>-->
-            <!--<el-menu-item index="/polo">-->
-              <!--<i class="el-icon-arrow-right"></i>-->
-              <!--<span slot="title">POLO衫</span>-->
-            <!--</el-menu-item>-->
-            <!--<el-menu-item index="/hoodie">-->
-              <!--<i class="el-icon-arrow-right"></i>-->
-              <!--<span slot="title">帽T</span>-->
-            <!--</el-menu-item>-->
-            <!--<el-menu-item index="/bag">-->
-              <!--<i class="el-icon-arrow-right"></i>-->
-              <!--<span slot="title">帆布袋</span>-->
-            <!--</el-menu-item>-->
-            <!--<el-menu-item index="/hat">-->
-              <!--<i class="el-icon-arrow-right"></i>-->
-              <!--<span slot="title">帽子</span>-->
-            <!--</el-menu-item>-->
-          <!--</el-menu>-->
-        <!--</el-col>-->
+        <el-col :span="24">
+          <div class="sm-product-menu">
+            <el-dropdown trigger="click" @command="handleCommand">
+            <span class="el-dropdown-link">
+              <el-button type="info"><i class="el-icon-more"></i></el-button>
+            </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item command="tshirt"> T-shirt</el-dropdown-item>
+                <el-dropdown-item command="polo">POLO衫</el-dropdown-item>
+                <el-dropdown-item command="hoodie">帽T</el-dropdown-item>
+                <el-dropdown-item command="bag">帆布袋</el-dropdown-item>
+                <el-dropdown-item command="hat">帽子</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </div>
+        </el-col>
         <el-col :span="24">
           <el-row :span="24" justify="center" type="flex" class="product">
             <el-col :span="24">
@@ -143,6 +129,9 @@
         //        this.$router.push({name:'聯絡我們'}) ;
 //      TODO URL change
         window.open('/#/connectUs', '_blank');
+      },
+      handleCommand(command) {
+        this.$router.push('/' + command);
       }
     }
   }
@@ -199,6 +188,11 @@
 
   .largeButton {
     font-size: x-large;
+  }
+
+  .sm-product-menu {
+    text-align: right;
+    margin-bottom: 10px;
   }
 
   #sm {

@@ -40,49 +40,20 @@
 
       <div id="xs">
         <el-col :span="24">
+          <div class="sm-about-menu">
+            <el-dropdown trigger="click" @command="handleCommand">
+            <span class="el-dropdown-link">
+              <el-button type="info"><i class="el-icon-more"></i></el-button>
+            </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item command="brandconcept"> 品牌理念</el-dropdown-item>
+                <el-dropdown-item command="materials">布料材質</el-dropdown-item>
+                <el-dropdown-item command="techniques">印刷技術</el-dropdown-item>
+                <el-dropdown-item command="howtomaintain">保養方式</el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </div>
           <div class="rightcontent">
-            <el-row class="mobile">
-                <div>
-                  <el-menu
-                    :default-active="$route.path"
-                    class="mobile"
-                    mode="horizontal"
-                    :router="true"
-                    backgroundColor="#ffffff"
-                    text-color="#191919"
-                    active-text-color="#f26531">
-                    <el-menu-item index="/brandconcept" class="item1">
-                      <i class="el-icon-menu"></i>
-                      <span slot="title">品牌理念</span>
-                    </el-menu-item>
-                    <el-menu-item index="/materials" class="item1">
-                      <i class="el-icon-star-on"></i>
-                      <span slot="title">布料材質</span>
-                    </el-menu-item>
-                  </el-menu>
-                </div>
-            </el-row>
-            <el-row class="mobile">
-              <div>
-                <el-menu
-                  :default-active="$route.path"
-                  class="mobile"
-                  mode="horizontal"
-                  :router="true"
-                  backgroundColor="#ffffff"
-                  text-color="#191919"
-                  active-text-color="#f26531">
-                  <el-menu-item index="/techniques" class="item1">
-                    <i class="el-icon-printer"></i>
-                    <span slot="title">印刷技術</span>
-                  </el-menu-item>
-                  <el-menu-item index="/howtomaintain" class="item1">
-                    <i class="el-icon-question"></i>
-                    <span slot="title">保養方式</span>
-                  </el-menu-item>
-                </el-menu>
-              </div>
-            </el-row>
             <el-row>
               <transition name="el-fade-in-linear">
                 <router-view></router-view>
@@ -101,17 +72,23 @@
   import ElCol from "element-ui/packages/col/src/col";
   import ElContainer from "../../node_modules/element-ui/packages/container/src/main";
   import ElRow from "element-ui/packages/row/src/row";
+  import ElCollapse from "../../node_modules/element-ui/packages/collapse/src/collapse";
   export default {
     components: {
+      ElCollapse,
       ElRow,
       ElContainer,
       ElCol
+    },
+    methods: {
+      handleCommand(command) {
+        this.$router.push('/' + command);
+      }
     }
   }
 </script>
 
 <style>
-
 
   .tac {
     width: 100%;
@@ -131,12 +108,10 @@
 
   .mobile {
     background-color: white;
-    /*margin-bottom: 20px;*/
   }
 
   .el-menu {
     border: none;
-    margin-left: 15%;
   }
 
   .el-menu-item {
@@ -145,6 +120,11 @@
 
   .item1 {
     font-size: 16px;
+  }
+
+  .sm-about-menu {
+    text-align: right;
+    margin-bottom: 10px;
   }
 
   @media screen and (max-device-width: 480px) and (orientation: portrait) {
@@ -186,4 +166,5 @@
       display: none;
     }
   }
+
 </style>

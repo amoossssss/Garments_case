@@ -59,20 +59,36 @@
 
       <el-footer height="auto">
         <el-row>
-          <el-col :sm="10" :xs="24">
-            <h2>SERVICE</h2>
-            <div class="contact">
-              <h3>電子信箱 ：echoplus2016@gmail.com</h3>
-              <h3>聯絡電話 ：(02)8692-3526 / 0975-010-399</h3>
-              <h3>週一至週五 9:00-17:00</h3>
-            </div>
-            <h6>©echoplus. All Rights reserved</h6>
-          </el-col>
-          <el-col :sm={span:4,offset:8} :xs={span:8,offset:0}>
-            <a target="_blank" href="https://facebook.com/echoplus2016/">
-              <img src="./assets/MainPage/FB.png" class="FB">
-            </a>
-          </el-col>
+          <div id="sm">
+            <el-col :sm="10" :xs="24">
+              <h2>SERVICE</h2>
+              <div class="contact">
+                <h3>電子信箱 ：echoplus2016@gmail.com</h3>
+                <h3>聯絡電話 ：(02)8692-3526 / 0975-010-399</h3>
+                <h3>週一至週五 9:00-17:00</h3>
+              </div>
+              <h6>©echoplus. All Rights reserved</h6>
+            </el-col>
+            <el-col :sm={span:4,offset:8} :xs={span:8,offset:0}>
+              <a target="_blank" href="https://facebook.com/echoplus2016/">
+                <img src="./assets/MainPage/FB.png" class="FB">
+              </a>
+            </el-col>
+          </div>
+          <div id="xs">
+            <el-col :sm="12" :xs="18">
+              <h2>SERVICE</h2>
+              <div class="contact">
+                <h3>電子信箱 ：echoplus2016@gmail.com</h3>
+                <h3>聯絡電話 ：(02)8692-3526 / 0975-010-399</h3>
+                <h3>週一至週五 9:00-17:00</h3>
+                <a target="_blank" href="https://facebook.com/echoplus2016/">
+                  <img src="./assets/MainPage/FB.png" class="FB">
+                </a>
+              </div>
+              <h6>©echoplus. All Rights reserved</h6>
+            </el-col>
+          </div>
         </el-row>
       </el-footer>
 
@@ -204,8 +220,8 @@
   }
 
   .FB {
-    width: 100%;
-    margin-top: 25%;
+    width: 50%;
+    margin-top: 5%;
   }
 
   .el-menu-item {
@@ -261,11 +277,20 @@
     }
 
     .FB {
-      margin-top: 0%;
+      margin-top: 0;
+      width: 40%;
     }
 
     .contact {
       margin-bottom: 0%;
+    }
+
+    #sm {
+      display: none;
+    }
+
+    #xs {
+      display: block;
     }
   }
 
@@ -292,7 +317,16 @@
     }
 
     .FB {
-      margin-top: 0%;
+      margin-top: 0;
+      width: 50%;
+    }
+
+    #sm {
+      display: none;
+    }
+
+    #xs {
+      display: block;
     }
   }
 
@@ -314,8 +348,21 @@
       border-radius: 5px
     }
 
+    .FB {
+      margin-top: 0;
+      width: 30%;
+    }
+
     .logo {
       margin-left: 20px;
+    }
+
+    #sm {
+      display: none;
+    }
+
+    #xs {
+      display: block;
     }
   }
 
@@ -327,6 +374,20 @@
     #sm-menu {
       display: none;
     }
+
+    #sm {
+      display: block;
+    }
+
+    #xs {
+      display: none;
+    }
+
+    .FB {
+      width: 100%;
+      margin-top: 25%;
+    }
+
   }
 
 </style>
