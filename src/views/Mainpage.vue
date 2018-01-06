@@ -2,8 +2,8 @@
   <div>
 
     <el-row>
-      <el-col>
-        <div class="block">
+      <el-col class="block">
+        <div>
           <carousel :perPage="1" :autoplay="true" :autoplayHoverPause="true" :autoplayTimeout="3500"
                     paginationActiveColor="#f26531" :loop="true">
             <slide>
@@ -257,6 +257,10 @@
 
   .bannerClick {
     cursor: pointer;
+  }
+
+  .block {
+    margin-bottom: 20px;
   }
 
   #sm {

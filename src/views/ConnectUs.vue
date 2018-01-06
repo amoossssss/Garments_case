@@ -56,7 +56,6 @@
                   <el-option label="深灰" value="18"></el-option>
                   <el-option label="黑色" value="12"></el-option>
                 </el-select>
-                <!--<el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>-->
               </el-form-item>
               <el-form-item>
                 <el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>
@@ -68,17 +67,13 @@
                 <el-input type="textarea" v-model="ruleForm.desc"></el-input>
               </el-form-item>
               <el-form-item label="上傳檔案">
-                <el-upload
-                  class="upload-demo"
-                  action="https://jsonplaceholder.typicode.com/posts/"
-                  :on-preview="handlePreview"
-                  :on-remove="handleRemove"
-                  multiple
-                  :limit="1"
-                  :on-exceed="handleExceed"
-                  :file-list="ruleForm.fileList">
-                  <el-button size="small" type="primary">點擊上傳</el-button>
-                </el-upload>
+                <div class="file">
+                  <el-button type="primary">
+                    選擇檔案
+                    <input type="file" @change="processFile($event)">
+                  </el-button>
+                  <p></p>
+                </div>
               </el-form-item>
               <el-form-item>
                 <el-button type="primary" @click="submitForm('ruleForm')">傳送表單</el-button>
@@ -143,7 +138,6 @@
                   <el-option label="深灰" value="18"></el-option>
                   <el-option label="黑色" value="12"></el-option>
                 </el-select>
-                <!--<el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>-->
               </el-form-item>
               <el-form-item>
                 <el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>
@@ -155,17 +149,13 @@
                 <el-input type="textarea" v-model="ruleForm.desc"></el-input>
               </el-form-item>
               <el-form-item label="上傳檔案">
-                <el-upload
-                  class="upload-demo"
-                  action="https://jsonplaceholder.typicode.com/posts/"
-                  :on-preview="handlePreview"
-                  :on-remove="handleRemove"
-                  multiple
-                  :limit="1"
-                  :on-exceed="handleExceed"
-                  :file-list="ruleForm.fileList">
-                  <el-button size="small" type="primary">點擊上傳</el-button>
-                </el-upload>
+                <div class="file">
+                  <el-button type="primary">
+                    選擇檔案
+                    <input type="file" @change="processFile($event)">
+                  </el-button>
+                  <p></p>
+                </div>
               </el-form-item>
               <el-form-item>
                 <el-button type="primary" @click="submitForm('ruleForm')">傳送表單</el-button>
@@ -191,8 +181,6 @@
   import ElCol from "element-ui/packages/col/src/col";
   import ElButton from "../../node_modules/element-ui/packages/button/src/button";
 
-//  Vue.http.options.xhr = {withCredentials: true};
-
   export default {
     components: {
       ElButton,
@@ -210,7 +198,7 @@
           color: '',
           numbers: '',
           desc: '',
-          fileList: []
+          fileList: ''
         },
         rules: {
           name: [
@@ -246,8 +234,8 @@
               clothType: this.ruleForm.clothType,
               color: this.ruleForm.color,
               numbers: this.ruleForm.numbers,
-              desc: this.ruleForm.desc
-//              uploadfile: this.ruleForm.fileList
+              desc: this.ruleForm.desc,
+              uploadfile: this.ruleForm.fileList
             };
 
             console.log(reqParam);
@@ -300,7 +288,17 @@
       },
 
       handleExceed(files, fileList) {
+        console.log(fileList);
         this.$message.warning(`限制選擇 1 個文件，您選擇了 ${files.length} 個文件，共選擇了 ${files.length + fileList.length} 個文件`);
+      },
+
+      letsSee(file, fileList){
+        console.log(fileList);
+      },
+
+      processFile(event) {
+        this.ruleForm.fileList = event.target.files;
+        console.log(this.ruleForm.fileList)
       }
 
     }
@@ -357,41 +355,58 @@
     /*margin-left: 20px;*/
   }
 
+  .file {
+    position: relative;
+    display: inline-block;
+  }
+
+  .file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+  }
+
   #sm {
     display: none;
   }
 
-  @media screen and (max-device-width: 480px) and (orientation: portrait){
+  @media screen and (max-device-width: 480px) and (orientation: portrait) {
     #sm {
       display: none;
     }
+
     #xs {
       display: block;
     }
   }
 
-  @media screen and (max-device-width: 640px) and (orientation: landscape){
+  @media screen and (max-device-width: 640px) and (orientation: landscape) {
     #sm {
       display: none;
     }
+
     #xs {
       display: block;
     }
   }
 
-  @media screen and (min-device-width: 640px) and (max-device-width: 1024px){
+  @media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
     #sm {
       display: none;
     }
+
     #xs {
       display: block;
     }
   }
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px) {
     #sm {
       display: block;
     }
+
     #xs {
       display: none;
     }
