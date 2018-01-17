@@ -240,10 +240,6 @@
 
             console.log(reqParam);
 
-//            this.$http.options.xhr = {withCredentials: true};
-//            this.$http.options.emulateJSON = true;
-//            this.$http.options.credentials = true;
-
             this.$http.post('http://localhost:3000/uploadfile',
               {
                 reqParam
@@ -251,8 +247,6 @@
               {
                 headers: {
                   'Content-type': 'application/json;charset=UTF-8',
-//                  'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8',
-//                  'Access-Control-Allow-Origin' : '*',
                 }
               }).then((res) => {
               let data = res.data;
@@ -277,23 +271,6 @@
 
       resetForm(formName) {
         this.$refs[formName].resetFields();
-      },
-
-      handleRemove(file, fileList) {
-        console.log(file, fileList);
-      },
-
-      handlePreview(file) {
-        console.log(file);
-      },
-
-      handleExceed(files, fileList) {
-        console.log(fileList);
-        this.$message.warning(`限制選擇 1 個文件，您選擇了 ${files.length} 個文件，共選擇了 ${files.length + fileList.length} 個文件`);
-      },
-
-      letsSee(file, fileList){
-        console.log(fileList);
       },
 
       processFile(event) {

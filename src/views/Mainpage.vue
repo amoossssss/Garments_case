@@ -2,42 +2,47 @@
   <div>
 
     <el-row>
-      <el-col class="block">
-        <div>
-          <carousel :perPage="1" :autoplay="true" :autoplayHoverPause="true" :autoplayTimeout="3500"
-                    paginationActiveColor="#f26531" :loop="true">
-            <slide>
-              <img src="../assets/MainPage/banner1.jpg" class="carousel-img">
-            </slide>
-            <slide>
-              <div @click="product('Tshirt')" class="bannerClick"><img src="../assets/MainPage/banner2.jpg"
-                                                                       class="carousel-img"></div>
-            </slide>
-            <slide>
-              <div @click="goMaterial()" class="bannerClick"><img src="../assets/MainPage/banner3.jpg"
-                                                                  class="carousel-img"></div>
-            </slide>
-          </carousel>
-        </div>
-      </el-col>
-    </el-row>
-
-    <el-row>
 
       <div id="sm">
+
+        <el-row>
+          <el-col class="block">
+            <div>
+              <carousel :perPage="1" :autoplay="true" :autoplayHoverPause="true" :autoplayTimeout="3500"
+                        paginationActiveColor="#f26531" :loop="true">
+                <slide>
+                  <div @click="goProduct()" class="bannerClick"><img src="../assets/MainPage/banner7.jpg"
+                                                                     class="carousel-img"></div>
+                </slide>
+                <slide>
+                  <img src="../assets/MainPage/banner1.jpg" class="carousel-img">
+                </slide>
+                <slide>
+                  <div @click="product('Tshirt')" class="bannerClick"><img src="../assets/MainPage/banner2.jpg"
+                                                                           class="carousel-img"></div>
+                </slide>
+                <slide>
+                  <div @click="goMaterial()" class="bannerClick"><img src="../assets/MainPage/banner3.jpg"
+                                                                      class="carousel-img"></div>
+                </slide>
+              </carousel>
+            </div>
+          </el-col>
+        </el-row>
+
         <el-row type="flex" justify="center">
           <el-col>
             <el-row>
               <el-col :span="5">
                 <div class="decoration">
-                  <h3 class="features-title">客製產品</h3>
+                  <h3 class="features-title">客製團體服</h3>
                 </div>
               </el-col>
             </el-row>
             <el-row class="items" justify="space-between" type="flex" :gutter="20">
               <el-col :sm="6">
                 <div @click="product('Tshirt')" class="item">
-                  <img src="../../src/assets/MainPage/小圖1_test.jpg" class="features-img">
+                  <img src="../../src/assets/MainPage/小圖1.jpg" class="features-img">
                   <div class="middle">
                     <div class="text">前往商品頁面</div>
                   </div>
@@ -45,7 +50,7 @@
               </el-col>
               <el-col :sm="6">
                 <div @click="product('Hoodie')" class="item">
-                  <img src="../../src/assets/MainPage/小圖2_test.jpg" class="features-img">
+                  <img src="../../src/assets/MainPage/小圖2.jpg" class="features-img">
                   <div class="middle">
                     <div class="text">前往商品頁面</div>
                   </div>
@@ -53,7 +58,7 @@
               </el-col>
               <el-col :sm="6">
                 <div @click="product('Polo')" class="item">
-                  <img src="../../src/assets/MainPage/小圖4_test.jpg" class="features-img">
+                  <img src="../../src/assets/MainPage/小圖4.jpg" class="features-img">
                   <div class="middle">
                     <div class="text">前往商品頁面</div>
                   </div>
@@ -61,7 +66,7 @@
               </el-col>
               <el-col :sm="6">
                 <div @click="product('Bag')" class="item">
-                  <img src="../../src/assets/MainPage/小圖5_test.jpg" class="features-img">
+                  <img src="../../src/assets/MainPage/小圖5.jpg" class="features-img">
                   <div class="middle">
                     <div class="text">前往商品頁面</div>
                   </div>
@@ -86,6 +91,35 @@
       </div>
 
       <div id="xs">
+
+        <el-row>
+          <el-col class="block">
+            <div>
+              <carousel :perPage="1" :autoplay="true" :autoplayHoverPause="true" :autoplayTimeout="3500"
+                        paginationActiveColor="#f26531" :loop="true">
+                <slide>
+                  <img src="../assets/MainPage/b1.jpg" class="carousel-img">
+                </slide>
+                <!--<slide>-->
+                  <!--<div @click="goProduct()" class="bannerClick"><img src="../assets/MainPage/banner7.jpg"-->
+                                                                     <!--class="carousel-img"></div>-->
+                <!--</slide>-->
+                <!--<slide>-->
+                  <!--<img src="../assets/MainPage/banner1.jpg" class="carousel-img">-->
+                <!--</slide>-->
+                <!--<slide>-->
+                  <!--<div @click="product('Tshirt')" class="bannerClick"><img src="../assets/MainPage/banner2.jpg"-->
+                                                                           <!--class="carousel-img"></div>-->
+                <!--</slide>-->
+                <!--<slide>-->
+                  <!--<div @click="goMaterial()" class="bannerClick"><img src="../assets/MainPage/banner3.jpg"-->
+                                                                      <!--class="carousel-img"></div>-->
+                <!--</slide>-->
+              </carousel>
+            </div>
+          </el-col>
+        </el-row>
+
         <el-row type="flex" justify="center">
           <el-col>
             <el-row type="flex" justify="center">
@@ -98,7 +132,7 @@
             <el-row class="items" justify="space-between" type="flex" :gutter="20">
               <el-col :span="12">
                 <div @click="product('Tshirt')" class="item">
-                  <img src="../../src/assets/MainPage/小圖1_test.jpg" class="features-img">
+                  <img src="../../src/assets/MainPage/小圖1.jpg" class="features-img">
                   <div class="middle">
                     <div class="text">前往商品頁面</div>
                   </div>
@@ -106,7 +140,7 @@
               </el-col>
               <el-col :span="12">
                 <div @click="product('Hoodie')" class="item">
-                  <img src="../../src/assets/MainPage/小圖2_test.jpg" class="features-img">
+                  <img src="../../src/assets/MainPage/小圖2.jpg" class="features-img">
                   <div class="middle">
                     <div class="text">前往商品頁面</div>
                   </div>
@@ -116,7 +150,7 @@
             <el-row class="items" justify="space-between" type="flex" :gutter="20">
               <el-col :span="12">
                 <div @click="product('Polo')" class="item">
-                  <img src="../../src/assets/MainPage/小圖4_test.jpg" class="features-img">
+                  <img src="../../src/assets/MainPage/小圖4.jpg" class="features-img">
                   <div class="middle">
                     <div class="text">前往商品頁面</div>
                   </div>
@@ -124,7 +158,7 @@
               </el-col>
               <el-col :span="12">
                 <div @click="product('Bag')" class="item">
-                  <img src="../../src/assets/MainPage/小圖5_test.jpg" class="features-img">
+                  <img src="../../src/assets/MainPage/小圖5.jpg" class="features-img">
                   <div class="middle">
                     <div class="text">前往商品頁面</div>
                   </div>
@@ -182,6 +216,9 @@
       },
       goMaterial(){
         this.$router.push({name: '布料材質'});
+      },
+      goProduct(){
+        this.$router.push({name: '商品清單'});
       }
 
     },

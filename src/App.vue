@@ -23,7 +23,7 @@
               <el-menu-item index="/techniques" class="menu_title">印刷技術</el-menu-item>
               <el-menu-item index="/howtomaintain" class="menu_title">保養方式</el-menu-item>
             </el-submenu>
-            <el-menu-item index="/products">商品清單</el-menu-item>
+            <el-menu-item index="/products">訂製商品</el-menu-item>
             <el-menu-item index="/portfolio">歷年作品</el-menu-item>
             <el-menu-item index="/connectus">聯絡我們</el-menu-item>
 
@@ -39,7 +39,7 @@
             <el-dropdown-menu slot="dropdown">
               <el-dropdown-item command="home">首頁</el-dropdown-item>
               <el-dropdown-item command="about">關於我們</el-dropdown-item>
-              <el-dropdown-item command="products">商品清單</el-dropdown-item>
+              <el-dropdown-item command="products">訂製商品</el-dropdown-item>
               <el-dropdown-item command="portfolio">歷年作品</el-dropdown-item>
               <el-dropdown-item command="connectus">聯絡我們</el-dropdown-item>
             </el-dropdown-menu>
@@ -142,7 +142,8 @@
 
   #app {
     background-color: #e6e6e6;
-    font-family: Helvetica, "Hiragino Sans GB", sans-serif;
+    font-family: "Microsoft YaHei", sans-serif;
+    /*font-family: Helvetica,"Microsoft YaHei";*/
   }
 
   #container {
