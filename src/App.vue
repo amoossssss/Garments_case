@@ -69,9 +69,12 @@
               </div>
               <h6>©echoplus. All Rights reserved</h6>
             </el-col>
-            <el-col :sm={span:4,offset:8} :xs={span:8,offset:0}>
+            <el-col :sm={span:4,offset:9} :xs={span:8,offset:0}>
               <a target="_blank" href="https://facebook.com/echoplus2016/">
-                <img src="./assets/MainPage/FB.png" class="FB">
+                <img src="./assets/MainPage/fb_small.png" class="FB1">
+              </a>
+              <a @click="dialogVisiblesm = true">
+                <img src="./assets/MainPage/line.png" class="FB1">
               </a>
             </el-col>
           </div>
@@ -82,15 +85,36 @@
                 <h3>電子信箱 ：echoplus2016@gmail.com</h3>
                 <h3>聯絡電話 ：(02)8692-3526 / 0975-010-399</h3>
                 <h3>週一至週五 9:00-17:00</h3>
-                <a target="_blank" href="https://facebook.com/echoplus2016/">
-                  <img src="./assets/MainPage/FB.png" class="FB">
-                </a>
               </div>
+              <el-row>
+                <el-col :span="8">
+                  <a target="_blank" href="https://facebook.com/echoplus2016/">
+                    <img src="./assets/MainPage/fb_small.png" class="FB">
+                  </a>
+                  <a @click="dialogVisiblexs = true">
+                    <img src="./assets/MainPage/line.png" class="FB">
+                  </a>
+                </el-col>
+              </el-row>
               <h6>©echoplus. All Rights reserved</h6>
             </el-col>
           </div>
         </el-row>
       </el-footer>
+
+      <el-dialog
+        title="加入Line好友"
+        :visible.sync="dialogVisiblesm"
+        width="30%">
+        <img src="./assets/MainPage/QRcode.jpg" class="QR">
+      </el-dialog>
+
+      <el-dialog
+        title="加入Line好友"
+        :visible.sync="dialogVisiblexs"
+        width="70%">
+        <img src="./assets/MainPage/QRcode.jpg" class="QR">
+      </el-dialog>
 
     </el-container>
   </div>
@@ -105,7 +129,9 @@
   export default {
     data(){
       return {
-        isCollapse: true
+        isCollapse: true,
+        dialogVisiblexs: false,
+        dialogVisiblesm: false
       }
     },
     components: {
@@ -221,8 +247,20 @@
   }
 
   .FB {
-    width: 50%;
-    margin-top: 5%;
+    width: 40%;
+    margin-right: 5%;
+    /*margin-top: 45%;*/
+  }
+
+  .FB1 {
+    width: 60px;
+    margin-top: 35%;
+    margin-right: 5%;
+    text-align: right;
+  }
+
+  .QR {
+    width: 100%;
   }
 
   .el-menu-item {
@@ -349,10 +387,10 @@
       border-radius: 5px
     }
 
-    .FB {
-      margin-top: 0;
-      width: 30%;
-    }
+    /*.FB {*/
+      /*margin-top: 0;*/
+      /*width: 30%;*/
+    /*}*/
 
     .logo {
       margin-left: 20px;
@@ -382,11 +420,6 @@
 
     #xs {
       display: none;
-    }
-
-    .FB {
-      width: 100%;
-      margin-top: 25%;
     }
 
   }

@@ -72,7 +72,7 @@
                     選擇檔案
                     <input type="file" @change="processFile($event)">
                   </el-button>
-                  <p></p>
+                  <p>{{fileName}}</p>
                 </div>
               </el-form-item>
               <el-form-item>
@@ -154,7 +154,7 @@
                     選擇檔案
                     <input type="file" @change="processFile($event)">
                   </el-button>
-                  <p></p>
+                  <p>{{fileName}}</p>
                 </div>
               </el-form-item>
               <el-form-item>
@@ -190,6 +190,7 @@
     },
     data() {
       return {
+        fileName:'',
         dialogVisible: false,
         ruleForm: {
           name: '',
@@ -235,8 +236,10 @@
               color: this.ruleForm.color,
               numbers: this.ruleForm.numbers,
               desc: this.ruleForm.desc,
-              uploadfile: this.ruleForm.fileList
+              uploadfile: this.ruleForm.fileList[0]
             };
+
+//            reqParam.append('file',this.ruleForm.fileList[0],this.fileName);
 
             console.log(reqParam);
 
@@ -275,7 +278,9 @@
 
       processFile(event) {
         this.ruleForm.fileList = event.target.files;
-        console.log(this.ruleForm.fileList)
+        console.log(this.ruleForm.fileList);
+        console.log(this.ruleForm.fileList[0].name);
+        this.fileName = this.ruleForm.fileList[0].name ;
       }
 
     }
