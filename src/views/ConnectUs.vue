@@ -229,27 +229,40 @@
         this.$refs[formName].validate((valid) => {
           if (valid) {
 
-            let reqParam = {
-              name: this.ruleForm.name,
-              mail: this.ruleForm.mail,
-              clothType: this.ruleForm.clothType,
-              color: this.ruleForm.color,
-              numbers: this.ruleForm.numbers,
-              desc: this.ruleForm.desc,
-              uploadfile: this.ruleForm.fileList[0]
-            };
+              let formData = new FormData();
+              formData.append('uploadfile', this.ruleForm.fileList[0]);
+              formData.append('name', this.ruleForm.name);
+              formData.append('mail', this.ruleForm.mail);
+              formData.append('clothType', this.ruleForm.clothType);
+              formData.append('color', this.ruleForm.color);
+              formData.append('numbers', this.ruleForm.numbers);
+              formData.append('desc', this.ruleForm.desc);
 
-//            reqParam.append('file',this.ruleForm.fileList[0],this.fileName);
+              for (let pair of formData.entries()) {
+                console.log(pair[0]+ ', ' + pair[1]);
+              }
 
-            console.log(reqParam);
+//            let reqParam = {
+//              name: this.ruleForm.name,
+//              mail: this.ruleForm.mail,
+//              clothType: this.ruleForm.clothType,
+//              color: this.ruleForm.color,
+//              numbers: this.ruleForm.numbers,
+//              desc: this.ruleForm.desc,
+//              uploadfile: this.ruleForm.fileList[0]
+//            };
+
+
+//            console.log(reqParam);
 
             this.$http.post('http://localhost:3000/uploadfile',
               {
-                reqParam
+                formData
               },
               {
                 headers: {
-                  'Content-type': 'application/json;charset=UTF-8',
+                  'Content-type': 'multipart/form-data'
+//                    'application/json;charset=UTF-8',
                 }
               }).then((res) => {
               let data = res.data;
@@ -278,9 +291,8 @@
 
       processFile(event) {
         this.ruleForm.fileList = event.target.files;
-        console.log(this.ruleForm.fileList);
+        console.log(this.ruleForm.fileList[0]);
         console.log(this.ruleForm.fileList[0].name);
-        this.fileName = this.ruleForm.fileList[0].name ;
       }
 
     }
