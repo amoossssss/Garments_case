@@ -79,7 +79,7 @@
             </el-col>
           </div>
           <div id="xs">
-            <el-col :sm="12" :xs="18">
+            <el-col :sm="24" :xs="24">
               <h2>SERVICE</h2>
               <div class="contact">
                 <h3>電子信箱 ：echoplus2016@gmail.com</h3>
@@ -87,7 +87,7 @@
                 <h3>週一至週五 9:00-17:00</h3>
               </div>
               <el-row>
-                <el-col :span="8">
+                <el-col :span="5">
                   <a target="_blank" href="https://facebook.com/echoplus2016/">
                     <img src="./assets/MainPage/fb_small.png" class="FB">
                   </a>

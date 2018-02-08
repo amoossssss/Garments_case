@@ -98,23 +98,20 @@
               <carousel :perPage="1" :autoplay="true" :autoplayHoverPause="true" :autoplayTimeout="3500"
                         paginationActiveColor="#f26531" :loop="true">
                 <slide>
+                  <div @click="goProduct()" class="bannerClick"><img src="../assets/MainPage/b4.jpg"
+                                                                     class="carousel-img"></div>
+                </slide>
+                <slide>
                   <img src="../assets/MainPage/b1.jpg" class="carousel-img">
                 </slide>
-                <!--<slide>-->
-                  <!--<div @click="goProduct()" class="bannerClick"><img src="../assets/MainPage/banner7.jpg"-->
-                                                                     <!--class="carousel-img"></div>-->
-                <!--</slide>-->
-                <!--<slide>-->
-                  <!--<img src="../assets/MainPage/banner1.jpg" class="carousel-img">-->
-                <!--</slide>-->
-                <!--<slide>-->
-                  <!--<div @click="product('Tshirt')" class="bannerClick"><img src="../assets/MainPage/banner2.jpg"-->
-                                                                           <!--class="carousel-img"></div>-->
-                <!--</slide>-->
-                <!--<slide>-->
-                  <!--<div @click="goMaterial()" class="bannerClick"><img src="../assets/MainPage/banner3.jpg"-->
-                                                                      <!--class="carousel-img"></div>-->
-                <!--</slide>-->
+                <slide>
+                  <div @click="product('Tshirt')" class="bannerClick"><img src="../assets/MainPage/b2.jpg"
+                                                                           class="carousel-img"></div>
+                </slide>
+                <slide>
+                  <div @click="goMaterial()" class="bannerClick"><img src="../assets/MainPage/b3.jpg"
+                                                                      class="carousel-img"></div>
+                </slide>
               </carousel>
             </div>
           </el-col>
@@ -177,7 +174,7 @@
                 </div>
               </el-col>
             </el-row>
-            <img src="../../src/assets/MainPage/banner5.jpg" class="features-img">
+            <img src="../../src/assets/MainPage/b5.jpg" class="xs-banner">
           </el-col>
         </el-row>
       </div>
@@ -298,6 +295,11 @@
 
   .block {
     margin-bottom: 20px;
+  }
+
+  .xs-banner {
+    width: 100%;
+    margin-top: 30px;
   }
 
   #sm {
