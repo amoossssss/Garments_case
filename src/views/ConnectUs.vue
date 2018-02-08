@@ -242,6 +242,10 @@
                 console.log(pair[0]+ ', ' + pair[1]);
               }
 
+              var request = new XMLHttpRequest();
+              request.open("POST", "http://localhost:3000/uploadfile");
+              request.send(formData);
+
 //            let reqParam = {
 //              name: this.ruleForm.name,
 //              mail: this.ruleForm.mail,
@@ -255,28 +259,28 @@
 
 //            console.log(reqParam);
 
-            this.$http.post('http://localhost:3000/uploadfile',
-              {
-                formData
-              },
-              {
-                headers: {
-                  'Content-type': 'multipart/form-data'
-//                    'application/json;charset=UTF-8',
-                }
-              }).then((res) => {
-              let data = res.data;
-              this.$message({
-                message: data,
-                showClose: true,
-                duration: 10000
-              });
-
-            })
-              .catch(function (error) {
-                this.$message("提交失败 請再試一次");
-                console.log(error);
-              });
+//            this.$http.post('http://localhost:3000/uploadfile',
+//              {
+//                formData
+//              },
+//              {
+//                headers: {
+//                  'Content-type': 'multipart/form-data'
+////                    'application/json;charset=UTF-8',
+//                }
+//              }).then((res) => {
+//              let data = res.data;
+//              this.$message({
+//                message: data,
+//                showClose: true,
+//                duration: 10000
+//              });
+//
+//            })
+//              .catch(function (error) {
+//                this.$message("提交失败 請再試一次");
+//                console.log(error);
+//              });
 
           } else {
             console.log('error submit!!');
