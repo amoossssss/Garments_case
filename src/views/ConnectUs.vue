@@ -293,6 +293,7 @@
         this.ruleForm.fileList = event.target.files;
         console.log(this.ruleForm.fileList[0]);
         console.log(this.ruleForm.fileList[0].name);
+        this.fileName = this.ruleForm.fileList[0].name ;
       }
 
     }
