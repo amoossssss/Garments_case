@@ -233,49 +233,20 @@
               }
 
               let request = new XMLHttpRequest();
-              request.open("POST", "http://localhost:3000/uploadfile");
+              request.open("POST", "13.114.82.207:3000/uploadfile");
               request.send(formData);
 
-//            let reqParam = {
-//              name: this.ruleForm.name,
-//              mail: this.ruleForm.mail,
-//              clothType: this.ruleForm.clothType,
-//              color: this.ruleForm.color,
-//              numbers: this.ruleForm.numbers,
-//              desc: this.ruleForm.desc,
-//              uploadfile: this.ruleForm.fileList[0]
-//            };
+              alert("傳送成功!!");
 
-
-//            console.log(reqParam);
-
-//            this.$http.post('http://localhost:3000/uploadfile',
-//              {
-//                formData
-//              },
-//              {
-//                headers: {
-//                  'Content-type': 'multipart/form-data'
-////                    'application/json;charset=UTF-8',
-//                }
-//              }).then((res) => {
-//              let data = res.data;
-//              this.$message({
-//                message: data,
-//                showClose: true,
-//                duration: 10000
-//              });
-//
-//            })
-//              .catch(function (error) {
-//                this.$message("提交失败 請再試一次");
-//                console.log(error);
-//              });
+              this.$refs[formName].resetFields();
+              this.fileName = "";
 
           } else {
             console.log('error submit!!');
+            alert("傳送失敗，請再試一次!");
             return false;
           }
+
         });
       },
 
