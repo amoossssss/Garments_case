@@ -122,10 +122,6 @@
 
 <script>
 
-  import ElFooter from "../node_modules/element-ui/packages/footer/src/main";
-  import ElContainer from "../node_modules/element-ui/packages/container/src/main";
-  import ElCol from "element-ui/packages/col/src/col";
-  import ElButton from "../node_modules/element-ui/packages/button/src/button";
   export default {
     data(){
       return {
@@ -133,12 +129,6 @@
         dialogVisiblexs: false,
         dialogVisiblesm: false
       }
-    },
-    components: {
-      ElButton,
-      ElCol,
-      ElContainer,
-      ElFooter
     },
     name: 'app',
     methods: {

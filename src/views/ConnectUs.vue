@@ -66,15 +66,15 @@
               <el-form-item label="內容說明" prop="desc">
                 <el-input type="textarea" v-model="ruleForm.desc"></el-input>
               </el-form-item>
-              <!--<el-form-item label="上傳檔案">-->
-                <!--<div class="file">-->
-                  <!--<el-button type="primary">-->
-                    <!--選擇檔案-->
-                    <!--<input type="file" @change="processFile($event)">-->
-                  <!--</el-button>-->
-                  <!--<p>{{fileName}}</p>-->
-                <!--</div>-->
-              <!--</el-form-item>-->
+              <el-form-item label="上傳檔案">
+                <div class="file">
+                  <el-button type="primary">
+                    選擇檔案
+                    <input type="file" @change="processFile($event)">
+                  </el-button>
+                  <p>{{fileName}}</p>
+                </div>
+              </el-form-item>
               <el-form-item>
                 <el-button type="primary" @click="submitForm('ruleForm')">傳送表單</el-button>
                 <el-button @click="resetForm('ruleForm')">取消</el-button>
@@ -148,15 +148,15 @@
               <el-form-item label="內容說明" prop="desc">
                 <el-input type="textarea" v-model="ruleForm.desc"></el-input>
               </el-form-item>
-              <!--<el-form-item label="上傳檔案">-->
-                <!--<div class="file">-->
-                  <!--<el-button type="primary">-->
-                    <!--選擇檔案-->
-                    <!--<input type="file" @change="processFile($event)">-->
-                  <!--</el-button>-->
-                  <!--<p>{{fileName}}</p>-->
-                <!--</div>-->
-              <!--</el-form-item>-->
+              <el-form-item label="上傳檔案">
+                <div class="file">
+                  <el-button type="primary">
+                    選擇檔案
+                    <input type="file" @change="processFile($event)">
+                  </el-button>
+                  <p>{{fileName}}</p>
+                </div>
+              </el-form-item>
               <el-form-item>
                 <el-button type="primary" @click="submitForm('ruleForm')">傳送表單</el-button>
                 <el-button @click="resetForm('ruleForm')">取消</el-button>
@@ -176,18 +176,8 @@
 </template>
 
 <script>
-  import ElFormItem from "../../node_modules/element-ui/packages/form/src/form-item.vue";
-  import ElRow from "element-ui/packages/row/src/row";
-  import ElCol from "element-ui/packages/col/src/col";
-  import ElButton from "../../node_modules/element-ui/packages/button/src/button";
 
   export default {
-    components: {
-      ElButton,
-      ElCol,
-      ElRow,
-      ElFormItem
-    },
     data() {
       return {
         fileName:'',
@@ -230,7 +220,7 @@
           if (valid) {
 
               let formData = new FormData();
-//              formData.append('uploadfile', this.ruleForm.fileList[0]);
+              formData.append('uploadfile', this.ruleForm.fileList[0]);
               formData.append('name', this.ruleForm.name);
               formData.append('mail', this.ruleForm.mail);
               formData.append('clothType', this.ruleForm.clothType);

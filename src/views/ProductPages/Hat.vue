@@ -85,9 +85,9 @@
               <img src="../../assets/Product/帽小.jpg" class="item_image">
             </el-col>
             <el-col :offset="2" :span="14">
-              <p class="item_title">帽子</p>
+              <p class="xs_item_title">帽子</p>
               <div class="desc_button">
-                <el-button type="info" round @click="connectUs()" class="largeButton">前往訂製</el-button>
+                <el-button type="info" round @click="connectUs()" class="xs_largeButton">前往訂製</el-button>
               </div>
             </el-col>
           </el-row>
@@ -148,6 +148,12 @@
     margin-bottom: 10px;
   }
 
+  .xs_item_title {
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
   .lineProPage {
     /*margin-left: 80px;*/
     /*margin-right: 80px;*/
@@ -181,6 +187,10 @@
 
   .largeButton {
     font-size: x-large;
+  }
+
+  .xs_largeButton {
+    font-size: large;
   }
 
   .sm-product-menu {

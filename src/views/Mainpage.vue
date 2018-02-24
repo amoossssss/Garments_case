@@ -185,17 +185,8 @@
 </template>
 
 <script>
-  import ElRow from "element-ui/packages/row/src/row";
-  import ElCol from "element-ui/packages/col/src/col";
-  import ElButton from "../../node_modules/element-ui/packages/button/src/button";
 
   export default {
-    components: {
-      ElButton,
-      ElCol,
-      ElRow,
-
-    },
     methods: {
       product(name){
         if (name == 'Tshirt') {

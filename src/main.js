@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import ElementUI from 'element-ui'
 import VueResource from 'vue-resource'
-import VueCarousel from 'vue-carousel';
+import VueCarousel from 'vue-carousel'
 
 import 'element-ui/lib/theme-chalk/index.css'
 

@@ -80,7 +80,6 @@
 
 <script>
   import vueImages from 'vue-images'
-  import ElCol from "element-ui/packages/col/src/col";
 
   export default {
     data(){
@@ -111,7 +110,6 @@
       }
     },
     components: {
-      ElCol,
       vueImages: vueImages
     }
   }

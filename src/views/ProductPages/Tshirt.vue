@@ -89,9 +89,9 @@
               <img src="../../assets/Product/T恤小圖.jpg" class="item_image">
             </el-col>
             <el-col :offset="2" :span="14">
-              <p class="item_title">T恤</p>
+              <p class="xs_item_title">T恤</p>
               <div class="desc_button">
-                <el-button type="info" round @click="connectUs()" class="largeButton">前往訂製</el-button>
+                <el-button type="info" round @click="connectUs()" class="xs_largeButton">前往訂製</el-button>
               </div>
             </el-col>
           </el-row>
@@ -155,6 +155,16 @@
     font-size: 40px;
     margin-top: 0px;
     margin-bottom: 10px;
+  }
+
+  .xs_item_title {
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .xs_largeButton {
+    font-size: large;
   }
 
   .lineProPage {

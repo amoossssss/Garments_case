@@ -69,17 +69,7 @@
 </template>
 
 <script>
-  import ElCol from "element-ui/packages/col/src/col";
-  import ElContainer from "../../node_modules/element-ui/packages/container/src/main";
-  import ElRow from "element-ui/packages/row/src/row";
-  import ElCollapse from "../../node_modules/element-ui/packages/collapse/src/collapse";
   export default {
-    components: {
-      ElCollapse,
-      ElRow,
-      ElContainer,
-      ElCol
-    },
     methods: {
       handleCommand(command) {
         this.$router.push('/' + command);
