@@ -129,6 +129,7 @@
     margin-bottom: 20px;
   }
 
+
   #sm {
     display: none;
   }

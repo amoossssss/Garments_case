@@ -228,9 +228,9 @@
               formData.append('numbers', this.ruleForm.numbers);
               formData.append('desc', this.ruleForm.desc);
 
-              for (let pair of formData.entries()) {
-                console.log(pair[0]+ ', ' + pair[1]);
-              }
+//              for (let pair of formData.entries()) {
+//                console.log(pair[0]+ ', ' + pair[1]);
+//              }
 
               let request = new XMLHttpRequest();
               request.open("POST", "13.114.82.207:3000/uploadfile");
@@ -242,7 +242,7 @@
               this.fileName = "";
 
           } else {
-            console.log('error submit!!');
+//            console.log('error submit!!');
             alert("傳送失敗，請再試一次!");
             return false;
           }
@@ -257,8 +257,8 @@
 
       processFile(event) {
         this.ruleForm.fileList = event.target.files;
-        console.log(this.ruleForm.fileList[0]);
-        console.log(this.ruleForm.fileList[0].name);
+//        console.log(this.ruleForm.fileList[0]);
+//        console.log(this.ruleForm.fileList[0].name);
         this.fileName = this.ruleForm.fileList[0].name ;
       }
 

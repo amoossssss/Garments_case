@@ -136,7 +136,7 @@
     name: 'app',
     methods: {
       handleSelect(key, keyPath) {
-        console.log(key, keyPath);
+//        console.log(key, keyPath);
       },
       goHome() {
         this.$router.push({name: '主頁'});

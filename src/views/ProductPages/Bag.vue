@@ -189,6 +189,7 @@
 
   .largeButton {
     font-size: x-large;
+    font-family: "Microsoft YaHei","微软雅黑",sans-serif;
   }
 
   .sm-product-menu {

@@ -104,12 +104,8 @@
     border: none;
   }
 
-  .el-menu-item {
+  .item {
     text-align: center;
-  }
-
-  .item1 {
-    font-size: 16px;
   }
 
   .sm-about-menu {
