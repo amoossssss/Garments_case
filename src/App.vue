@@ -215,6 +215,10 @@
     font-size: 20px;
   }
 
+  .menu_title {
+    text-align: center;
+  }
+
   .el-submenu__icon-arrow::before {
     color: #565656;
   }
