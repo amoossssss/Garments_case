@@ -233,7 +233,7 @@
 //              }
 
               let request = new XMLHttpRequest();
-              request.open("POST", "13.114.82.207:3000/uploadfile");
+              request.open("POST", "http://www.echoplus2016.com:3000/uploadfile");
               request.send(formData);
 
               alert("傳送成功!!");
