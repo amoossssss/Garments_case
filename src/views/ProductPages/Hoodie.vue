@@ -205,6 +205,10 @@
     margin-bottom: 10px;
   }
 
+  .el-dropdown-menu {
+    font-family: "Microsoft YaHei","微软雅黑",sans-serif;
+  }
+
   #sm {
     display: none;
   }

@@ -26,39 +26,39 @@
               </el-form-item>
               <el-form-item label="款式" prop="clothType">
                 <el-select v-model="ruleForm.clothType" placeholder="請選擇款式">
-                  <el-option label="T恤" value="t-shirt"></el-option>
-                  <el-option label="POLO衫" value="polo"></el-option>
-                  <el-option label="帽T" value="hㄕoodie"></el-option>
-                  <el-option label="帆布袋" value="bag"></el-option>
-                  <el-option label="其他" value="other"></el-option>
+                  <el-option label="T恤" value="T恤"></el-option>
+                  <el-option label="POLO衫" value="POLO衫"></el-option>
+                  <el-option label="帽T" value="帽T"></el-option>
+                  <el-option label="帆布袋" value="帆布袋"></el-option>
+                  <el-option label="其他" value="其他"></el-option>
                 </el-select>
               </el-form-item>
               <el-form-item label="顏色" prop="color">
                 <el-select v-model="ruleForm.color" placeholder="請選擇顏色">
-                  <el-option label="鵝黃" value="1A"></el-option>
-                  <el-option label="土黃" value="04"></el-option>
-                  <el-option label="淺綠" value="07"></el-option>
-                  <el-option label="淺藍" value="06"></el-option>
-                  <el-option label="藍色" value="09"></el-option>
-                  <el-option label="淺粉" value="17"></el-option>
-                  <el-option label="橙橘" value="08"></el-option>
-                  <el-option label="桃紅" value="20"></el-option>
-                  <el-option label="紅色" value="15"></el-option>
-                  <el-option label="深紅" value="14"></el-option>
-                  <el-option label="草綠" value="19"></el-option>
-                  <el-option label="深綠" value="13"></el-option>
-                  <el-option label="寶藍" value="10"></el-option>
-                  <el-option label="丈青" value="11A"></el-option>
-                  <el-option label="紫色" value="05"></el-option>
-                  <el-option label="白色" value="23"></el-option>
-                  <el-option label="米白" value="22"></el-option>
-                  <el-option label="淺灰" value="16"></el-option>
-                  <el-option label="深灰" value="18"></el-option>
-                  <el-option label="黑色" value="12"></el-option>
+                  <el-option label="鵝黃" value="鵝黃"></el-option>
+                  <el-option label="土黃" value="土黃"></el-option>
+                  <el-option label="淺綠" value="淺綠"></el-option>
+                  <el-option label="淺藍" value="淺藍"></el-option>
+                  <el-option label="藍色" value="藍色"></el-option>
+                  <el-option label="淺粉" value="淺粉"></el-option>
+                  <el-option label="橙橘" value="橙橘"></el-option>
+                  <el-option label="桃紅" value="桃紅"></el-option>
+                  <el-option label="紅色" value="紅色"></el-option>
+                  <el-option label="深紅" value="深紅"></el-option>
+                  <el-option label="草綠" value="草綠"></el-option>
+                  <el-option label="深綠" value="深綠"></el-option>
+                  <el-option label="寶藍" value="寶藍"></el-option>
+                  <el-option label="丈青" value="丈青"></el-option>
+                  <el-option label="紫色" value="紫色"></el-option>
+                  <el-option label="白色" value="白色"></el-option>
+                  <el-option label="米白" value="米白"></el-option>
+                  <el-option label="淺灰" value="淺灰"></el-option>
+                  <el-option label="深灰" value="深灰"></el-option>
+                  <el-option label="黑色" value="黑色"></el-option>
                 </el-select>
               </el-form-item>
               <el-form-item>
-                <el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>
+                <el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼表</el-button>
               </el-form-item>
               <el-form-item label="件數" prop="numbers">
                 <el-input v-model="ruleForm.numbers"></el-input>
@@ -108,35 +108,35 @@
               </el-form-item>
               <el-form-item label="款式" prop="clothType">
                 <el-select v-model="ruleForm.clothType" placeholder="請選擇款式">
-                  <el-option label="T恤" value="t-shirt"></el-option>
-                  <el-option label="POLO衫" value="polo"></el-option>
-                  <el-option label="帽T" value="hoodie"></el-option>
-                  <el-option label="帆布袋" value="bag"></el-option>
-                  <el-option label="其他" value="other"></el-option>
+                  <el-option label="T恤" value="T恤"></el-option>
+                  <el-option label="POLO衫" value="POLO衫"></el-option>
+                  <el-option label="帽T" value="帽T"></el-option>
+                  <el-option label="帆布袋" value="帆布袋"></el-option>
+                  <el-option label="其他" value="其他"></el-option>
                 </el-select>
               </el-form-item>
               <el-form-item label="顏色" prop="color">
                 <el-select v-model="ruleForm.color" placeholder="請選擇顏色">
-                  <el-option label="鵝黃" value="1A"></el-option>
-                  <el-option label="土黃" value="04"></el-option>
-                  <el-option label="淺綠" value="07"></el-option>
-                  <el-option label="淺藍" value="06"></el-option>
-                  <el-option label="藍色" value="09"></el-option>
-                  <el-option label="淺粉" value="17"></el-option>
-                  <el-option label="橙橘" value="08"></el-option>
-                  <el-option label="桃紅" value="20"></el-option>
-                  <el-option label="紅色" value="15"></el-option>
-                  <el-option label="深紅" value="14"></el-option>
-                  <el-option label="草綠" value="19"></el-option>
-                  <el-option label="深綠" value="13"></el-option>
-                  <el-option label="寶藍" value="10"></el-option>
-                  <el-option label="丈青" value="11A"></el-option>
-                  <el-option label="紫色" value="05"></el-option>
-                  <el-option label="白色" value="23"></el-option>
-                  <el-option label="米白" value="22"></el-option>
-                  <el-option label="淺灰" value="16"></el-option>
-                  <el-option label="深灰" value="18"></el-option>
-                  <el-option label="黑色" value="12"></el-option>
+                  <el-option label="鵝黃" value="鵝黃"></el-option>
+                  <el-option label="土黃" value="土黃"></el-option>
+                  <el-option label="淺綠" value="淺綠"></el-option>
+                  <el-option label="淺藍" value="淺藍"></el-option>
+                  <el-option label="藍色" value="藍色"></el-option>
+                  <el-option label="淺粉" value="淺粉"></el-option>
+                  <el-option label="橙橘" value="橙橘"></el-option>
+                  <el-option label="桃紅" value="桃紅"></el-option>
+                  <el-option label="紅色" value="紅色"></el-option>
+                  <el-option label="深紅" value="深紅"></el-option>
+                  <el-option label="草綠" value="草綠"></el-option>
+                  <el-option label="深綠" value="深綠"></el-option>
+                  <el-option label="寶藍" value="寶藍"></el-option>
+                  <el-option label="丈青" value="丈青"></el-option>
+                  <el-option label="紫色" value="紫色"></el-option>
+                  <el-option label="白色" value="白色"></el-option>
+                  <el-option label="米白" value="米白"></el-option>
+                  <el-option label="淺灰" value="淺灰"></el-option>
+                  <el-option label="深灰" value="深灰"></el-option>
+                  <el-option label="黑色" value="黑色"></el-option>
                 </el-select>
               </el-form-item>
               <el-form-item>
@@ -168,7 +168,7 @@
 
     </el-row>
 
-    <el-dialog title="色碼錶" :visible.sync="dialogVisible" width="70%">
+    <el-dialog title="色碼表" :visible.sync="dialogVisible" width="70%">
       <img src="../../src/assets/Product/顏色.jpg" class="flow_img">
     </el-dialog>
 

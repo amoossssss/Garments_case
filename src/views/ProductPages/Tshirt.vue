@@ -74,7 +74,7 @@
               <el-button type="info"><i class="el-icon-more"></i></el-button>
             </span>
               <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item command="tshirt"> T-shirt</el-dropdown-item>
+                <el-dropdown-item command="tshirt">T-shirt</el-dropdown-item>
                 <el-dropdown-item command="polo">POLO衫</el-dropdown-item>
                 <el-dropdown-item command="hoodie">帽T</el-dropdown-item>
                 <el-dropdown-item command="bag">帆布袋</el-dropdown-item>
@@ -206,7 +206,9 @@
     margin-bottom: 10px;
   }
 
-  .
+  .el-dropdown-menu {
+    font-family: "Microsoft YaHei","微软雅黑",sans-serif;
+  }
 
   #sm {
     display: none;

@@ -91,11 +91,13 @@
                   <a target="_blank" href="https://facebook.com/echoplus2016/">
                     <img src="./assets/MainPage/fb_small.png" class="FB">
                   </a>
+                  <!--<div class="line-it-button" data-lang="zh_Hant" data-type="friend" data-lineid="echoplus2016" style="display: block;"></div>-->
                   <a @click="dialogVisiblexs = true">
                     <img src="./assets/MainPage/line.png" class="FB">
                   </a>
                 </el-col>
               </el-row>
+              <!--<div class="line-it-button" data-lang="zh_Hant" data-type="friend" data-lineid="echoplus2016" style="display: block;"></div>-->
               <h6>©echoplus. All Rights reserved</h6>
             </el-col>
           </div>
@@ -114,6 +116,7 @@
         :visible.sync="dialogVisiblexs"
         width="70%">
         <img src="./assets/MainPage/QRcode.jpg" class="QR">
+        <p style="text-align: center; font-size: medium">手機用戶請長按QR code，點選打開line.me．</p>
       </el-dialog>
 
     </el-container>
@@ -148,6 +151,10 @@
 
 <style>
 
+  .line-it-button {
+    margin-top: 10px;
+  }
+
   .el-fade-in-linear-enter-active {
     transition-delay: 0.2s;
   }
@@ -158,7 +165,7 @@
 
   #app {
     background-color: #e6e6e6;
-    font-family: "Microsoft YaHei", sans-serif;
+    font-family: "Microsoft YaHei","微软雅黑",sans-serif;
     /*font-family: Helvetica,"Microsoft YaHei";*/
   }
 
