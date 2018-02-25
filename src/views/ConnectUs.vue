@@ -140,7 +140,7 @@
                 </el-select>
               </el-form-item>
               <el-form-item>
-                <el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼錶</el-button>
+                <el-button type="info" @click="dialogVisible = true" class="colorButton">查看色碼表</el-button>
               </el-form-item>
               <el-form-item label="件數" prop="numbers">
                 <el-input v-model="ruleForm.numbers"></el-input>
